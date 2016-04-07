@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Second table</title>
+    <meta charset="utf-8" />
+    <style type="text/css">
+        td{
+            font-size: large;
+            text-align:center;
+        }
+        .left-aligned{
+            text-align:left;
+        }
+        .right-aligned{
+            text-align:right;
+        }
+        #bottom-aligned{
+            text-align:right;
+            vertical-align: bottom;
+        }
+    </style>
+</head>
+<body>
+    <table width="200" height="150" border="1" cellspacing="2" cellpadding="2">
+        <tr>
+            <td colspan="3">Title goes here</td>
+            <td>A</td>
+            <td class="right-aligned">B</td>
+        </tr>
+        <tr>
+            <td rowspan="3" class="left-aligned">C</td>
+            <td>D</td>
+            <td>E</td>
+            <td>F</td>
+            <td class="right-aligned">G</td>
+        </tr>
+        <tr>
+            <td>H</td>
+            <td colspan="2">I</td>
+            <td rowspan="2" id="bottom-aligned">J</td>
+        </tr>
+        <tr>
+            <td>K</td>
+            <td>L</td>
+            <td>M</td>
+        </tr>
+        <tr>
+            <td class="right-aligned">N</td>
+            <td colspan="4">O</td>
+        </tr>
+    </table>
+</body>
+</html>

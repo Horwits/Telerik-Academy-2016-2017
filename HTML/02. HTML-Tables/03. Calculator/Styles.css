@@ -1,0 +1,35 @@
+﻿body  {
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    background-color: whitesmoke;
+    width: 310px;
+    height: 380px;
+    border: 2px solid #acd7e5;
+    font-size: 250%;
+    font-family: Consolas;
+    font-weight: bold;
+    color: #8bf3f1;
+    text-shadow: 2px 2px 2px grey;
+}
+
+tr{
+    border-bottom: 2px solid #acd7e5;
+}
+
+.inner {
+    border-right: 2px solid #acd7e5;
+}
+
+
+td{
+    border-top: 2px solid #acd7e5;
+    text-align: center;
+}
+
+.upper{
+    border-top: none;
+    text-align: right;
+}
