@@ -46,6 +46,66 @@ class Program
         }
     }
 
+    private static void FillMatrixTypeB(int[,] matrix, int n)
+    {
+        int maxRotations = n * n,
+        col = 0,
+        row = 0;
+
+        string direction = "down";
+
+        for (int i = 1; i <= maxRotations; i++)
+        {
+            if (direction == "up" && (row < 0 || matrix[row, col] != 0))
+            {
+                direction = "right";
+                col--;
+                row--;
+            }
+
+            if (direction == "right" && (col == (n - n) + col || matrix[row, col] != 0))
+            {
+                if (row > 0)
+                {
+                    direction = "up";
+                    col--;
+                    row--;
+                }
+                else
+                {
+                    direction = "down";
+                    col += 2;
+                    row += 2;
+                }
+            }
+
+            if (direction == "down" && (row > (n - 1) || matrix[row, col] != 0))
+            {
+                direction = "right";
+                row--;
+                col++;
+            }
+
+            matrix[row, col] = i;
+
+            switch (direction)
+            {
+                case "right":
+                    col++;
+                    break;
+                case "down":
+                    row++;
+                    break;
+                case "left":
+                    col--;
+                    break;
+                case "up":
+                    row--;
+                    break;
+            }
+        }
+    }
+
     private static void FillMatrixTypeD(int[,] matrix, int n)
     {
         int maxRotations = n * n,
@@ -120,10 +180,10 @@ class Program
     static void Main()
     {
         string userInput = Console.ReadLine();
-        string letter = Console.ReadLine();
+        string letter = Console.ReadLine().ToLower();
 
         int n;
-        bool userInputIsValid = int.TryParse(userInput, out n) && (1 <= n && n <= 20);
+        bool userInputIsValid = int.TryParse(userInput, out n) && (1 <= n && n <= 128);
         if (userInputIsValid)
         {
             int[,] matrix = new int[n, n];
@@ -131,6 +191,14 @@ class Program
             if (letter == "a")
             {
                 FillMatrixTypeA(matrix, n);
+            }
+            else if (letter == "b")
+            {
+                FillMatrixTypeB(matrix, n);
+            }
+            else if (letter == "c")
+            {
+                FillMatrixTypeB(matrix, n);
             }
             else if (letter == "d")
             {
