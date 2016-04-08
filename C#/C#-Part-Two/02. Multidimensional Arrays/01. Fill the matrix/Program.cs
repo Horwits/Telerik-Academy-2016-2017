@@ -2,34 +2,6 @@
 
 class Program
 {
-    static void Main()
-    {
-        string userInput = Console.ReadLine();
-        string letter = Console.ReadLine();
-
-        int n;
-        bool userInputIsValid = int.TryParse(userInput, out n) && (1 <= n && n <= 20);
-        if (userInputIsValid)
-        {
-            int[,] matrix = new int[n, n];
-
-            if (letter == "a")
-            {
-                FillMatrixTypeA(matrix, n);
-            }
-            else if (letter == "d")
-            {
-                FillMatrixTypeD(matrix, n);
-            }
-
-            PrintMatrix(matrix, n);
-        }
-        else
-        {
-            Console.WriteLine("Invalid input number!");
-        }
-    }
-
     private static void FillMatrixTypeA(int[,] matrix, int n)
     {
         int maxRotations = n * n,
@@ -143,5 +115,33 @@ class Program
             Console.WriteLine();
         }
 
+    }
+
+    static void Main()
+    {
+        string userInput = Console.ReadLine();
+        string letter = Console.ReadLine();
+
+        int n;
+        bool userInputIsValid = int.TryParse(userInput, out n) && (1 <= n && n <= 20);
+        if (userInputIsValid)
+        {
+            int[,] matrix = new int[n, n];
+
+            if (letter == "a")
+            {
+                FillMatrixTypeA(matrix, n);
+            }
+            else if (letter == "d")
+            {
+                FillMatrixTypeD(matrix, n);
+            }
+
+            PrintMatrix(matrix, n);
+        }
+        else
+        {
+            Console.WriteLine("Invalid input number!");
+        }
     }
 }
