@@ -2,24 +2,40 @@
 
 class Program
 {
+    static void GenerateVariations(int[] array, int index, int elementsCount)
+    {
+        int length = array.Length;
+        if (index == length)
+        {
+            PrintResultToConsole(array);
+        }
+        else
+        {
+            for (int i = 1; i <= elementsCount; i++)
+            {
+                array[index] = i;
+                GenerateVariations(array, index + 1, elementsCount);
+            }
+        }
+    }
+
+    static void PrintResultToConsole(int[] array)
+    {
+        foreach (var item in array)
+        {
+            Console.Write("{0}", item);
+        }
+
+        Console.WriteLine();
+    }
+
     static void Main()
     {
         var n = int.Parse(Console.ReadLine());
         var k = int.Parse(Console.ReadLine());
 
+        var numbers = new int[k];
 
-        var numbers = new int[n];
-        for (int i = 0; i < n; i++)
-        {
-            numbers[i] = i + 1;
-        }
-
-        for (int i = 0; i < n; i++)
-        {
-            for (int j = 0; j < n; j++)
-            {
-                Console.WriteLine("{0},{1}", numbers[i], numbers[j]);
-            }
-        }
+        GenerateVariations(numbers, 0, n);
     }
 }
