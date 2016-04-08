@@ -21,12 +21,7 @@ class Program
 
     static void PrintResultToConsole(int[] array)
     {
-        foreach (var item in array)
-        {
-            Console.Write("{0}", item);
-        }
-
-        Console.WriteLine();
+        Console.WriteLine("{" + string.Join(",", array) + "}");
     }
 
     static void Main()
