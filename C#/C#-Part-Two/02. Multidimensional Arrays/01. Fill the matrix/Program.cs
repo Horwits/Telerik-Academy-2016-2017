@@ -106,6 +106,36 @@ class Program
         }
     }
 
+    private static void FillMatrixTypeC(int[,] matrix, int n)
+    {
+        //TO DO: change the style of the solution
+        int counter = 1;
+        for (int i = n - 1; i >= 0; i--)
+        {
+            int row = i;
+            int col = 0;
+            do
+            {
+                matrix[row, col] = counter;
+                col++;
+                row++;
+                counter++;
+            } while (row < n);
+        }
+        for (int i = 1; i < n; i++)
+        {
+            int col = i;
+            int row = 0;
+            do
+            {
+                matrix[row, col] = counter;
+                col++;
+                row++;
+                counter++;
+            } while (col < n);
+        }
+    }
+
     private static void FillMatrixTypeD(int[,] matrix, int n)
     {
         int maxRotations = n * n,
@@ -179,8 +209,8 @@ class Program
 
     static void Main()
     {
-        string userInput = Console.ReadLine();
-        string letter = Console.ReadLine().ToLower();
+        string userInput = "5";// Console.ReadLine();
+        string letter = "c";//Console.ReadLine().ToLower();
 
         int n;
         bool userInputIsValid = int.TryParse(userInput, out n) && (1 <= n && n <= 128);
@@ -198,7 +228,7 @@ class Program
             }
             else if (letter == "c")
             {
-                FillMatrixTypeB(matrix, n);
+                FillMatrixTypeC(matrix, n);
             }
             else if (letter == "d")
             {
