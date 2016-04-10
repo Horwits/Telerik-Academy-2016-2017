@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Student system</title>
+	<script src="html5shiv-master/dist/html5shiv.js"></script>
+	<style>
+		body{
+			margin: 0;
+			padding: 0;
+		}
+		#wrapper{
+			width: 800px;
+			margin: 0 auto;
+			padding: 10px;
+			font-family: sans-serif;
+			border: 2px solid black;
+		}
+		h1,h2{
+			display: inline-block;
+		}
+
+		h2{
+			margin-left: 100px;
+		}
+
+		table,th,td{
+			border: 1px solid black;
+		}
+
+		th,td{
+			border-top:none;
+			border-left: none;
+		}
+			
+		tfoot td{
+			border-bottom: none;
+		}
+
+		.without-right-border{
+			border-right: none;
+		}
+	</style>
+</head>
+<body>
+	<div id="wrapper">
+		<header>
+			<h1>Logo</h1>
+			<h2>Welcome to Our Web Site</h2>
+		</header>
+		<nav>
+			<ul>
+				<li>Nav item 1</li>
+				<li>Nav item 1</li>
+				<li>Nav item 1</li>
+				<li>Nav item 1</li>
+			</ul>
+		</nav>
+		<section>
+			<article>
+				<table cellspacing="0" cellpadding="5">
+					<thead>
+						<tr>
+							<th>First name</th>
+							<th>Last name</th>
+							<th class="without-right-border">Score</th>
+						</tr>
+					</thead>
+					<tfoot>
+						<tr>
+							<td>Kiro</td>
+							<td>Kirov</td>
+							<td class="without-right-border">4.62</td>
+						</tr>
+					</tfoot>
+					<tbody>
+						<tr>
+							<td>Ivan</td>
+							<td>Ivanov</td>
+							<td class="without-right-border">4.54</td>
+						</tr>
+						<tr>
+							<td>Petar</td>
+							<td>Petrov</td>
+							<td class="without-right-border">4.31</td>
+						</tr>
+					</tbody>
+				</table>
+			</article>
+		</section>
+	</div>
+</body>
+</html>
