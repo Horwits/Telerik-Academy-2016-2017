@@ -31,9 +31,7 @@ class Company
 
         string companyNamePrintString;
         Console.WriteLine(
-            companyName != string.Empty ?
-            companyNamePrintString = string.Format("{0}", companyName) :
-            companyNamePrintString = string.Format("{0}", "(no comany name)")
+            companyNamePrintString = string.Format("{0}", companyName)
             );
 
         string companyAddressPrintString;
@@ -46,7 +44,7 @@ class Company
         string companyTelPrintString;
         Console.WriteLine(
             phoneNumber != string.Empty ?
-            companyTelPrintString = string.Format("Tel: {0:(+###) ### ## ## ###}", phoneNumber) :
+            companyTelPrintString = string.Format("Tel. {0:(+###) ### ## ## ###}", phoneNumber) :
             companyTelPrintString = string.Format("{0}", "(no company phone number)")
             );
 
@@ -54,7 +52,7 @@ class Company
         Console.WriteLine(
             faxNumber != string.Empty ?
             companyFaxNumberPrintString = string.Format("Fax: {0:(+ ###) ## ## ###}", faxNumber) :
-            companyFaxNumberPrintString = string.Format("{0}", "(no fax)")
+            companyFaxNumberPrintString = string.Format("Fax: {0}", "(no fax)")
             );
 
         string webSitePrintString;
