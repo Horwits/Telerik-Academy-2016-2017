@@ -1,0 +1,146 @@
+﻿body {
+    font-size: 27px;
+}
+
+body,span, table, thead, tbody, tfoot, td, th, tr, p, form, input img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: sans-serif;
+}
+
+
+
+.first-row{
+    text-align: left;
+    padding-left: 5px;
+}
+
+span.pages:hover{
+    height: 22px;
+    width:16px;
+    border: 1px solid #C95C05;
+    border-radius: 2px;
+    /*background-image: url(on-hoover.png);*/
+}
+
+.product-names {
+    background-image: linear-gradient( to bottom, #F2F2F4, #DBDFE4 );
+}
+
+tfoot tr.without-edges #left-bottom,#right-bottom{
+    background-image: linear-gradient( to bottom, #FFFFFF, #B9BEC3 );
+    vertical-align: central;
+}
+
+tfoot tr td img{
+    vertical-align: middle;
+    height: 22px;
+}
+#first-img{
+    margin-left: 5px;
+}
+
+#left-bottom{
+    border-radius:0 0 0 10px;
+}
+
+#right-bottom{
+    border-radius:0 0 10px 0;
+}
+
+tbody {
+    background-color: white;
+}
+
+th, td {
+    border-right: 1px solid #a4abb2;
+    border-top: 1px solid #a4abb2;
+    height: 25px;
+    color: #3B3B3B;
+    font-weight:normal;
+    padding:0 5px 0 5px;
+}
+
+table {
+    width: 878px;
+    border-radius: 10px;
+    border: 1px solid #a4abb2;
+    height: 418px;
+    font-size: 50%;
+    background-color: #dee2e7;
+
+}
+
+.first-and-last-vertical-size {
+    width: 53px;
+    padding: 0 5px 0 5px;
+
+}
+
+.without-edges {
+    border-radius: 10px 10px;
+}
+
+.noUpperBorder {
+    border-top: none;
+}
+
+.last-vertical, .noUpperBorder {
+    border-right: none;
+}
+
+.name-cell-size {
+    width: 238px;
+}
+
+.unit-size {
+    width: 148px;
+}
+
+.quantity-per-unit-size {
+    width: 138px;
+}
+
+#third-row-height {
+    height: 32px;
+    background-color: none;
+    vertical-align: central;
+
+}
+
+#third-row-height input{
+    height: 20px;
+}
+#third-row-height .first-and-last-vertical-size input{
+    width: 28px;
+}
+
+#third-row-height .name-cell-size input{
+    width: 142px;
+}
+
+#third-row-height .unit-size input{
+    width: 78px;
+}
+
+#third-row-height .quantity-per-unit-size input{
+    width: 92px;
+}
+
+#third-row-height .unit-per-stock-size input{
+    width: 78px;
+}
+
+#third-row-height .last-vertical input{
+    width: auto;
+    height: auto;
+}
+
+#third-row-height td img{
+    vertical-align: middle;
+}
+
+tfoot p{
+    text-align: right;
+}

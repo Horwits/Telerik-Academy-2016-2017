@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Grid Component</title>
+    <meta charset="utf-8" lang="en-bg" />
+    <link href="GridComponentStyles.css" rel="stylesheet" />
+</head>
+<body>
+    <table cellpadding="0" cellspacing="0">
+        <thead>
+            <!--heading row-->
+            <tr class="without-edges">
+                <th colspan="6" class="noUpperBorder first-row"><p>Drag a column header and drop it here to group by that column</p></th>
+            </tr>
+            <!--product names-->
+            <tr class="product-names">
+                <th class="first-and-last-vertical-size"><p>ProductID</p></th>
+                <th class="name-cell-size"><p>Product name</p></th>
+                <th class="unit-size"><p>Unit price</p></th>
+                <th class="quantity-per-unit-size"><p>Quantity per unit</p></th>
+                <th class="unit-per-stock-size"><p>Units in stock</p></th>
+                <th class="last-vertical first-and-last-vertical-size"><p>Discontinued</p></th>
+            </tr>
+            <!----forms-->
+            <tr id="third-row-height">
+                <td class="first-and-last-vertical-size">
+                    <input type="text" />
+                </td>
+                <td class="name-cell-size">
+                    <input type="text" name="name_cell" />
+
+                </td>
+                <td class="unit-size">
+                    <!--TODO: add img-->
+                    <input type="text" name="unit"/>
+                    <img src="upper.png" alt="" />
+
+                </td>
+                <td class="quantity-per-unit-size">
+                    <input type="text" />
+
+                </td>
+                <td class="unit-per-stock-size">
+                    <input type="text" />
+                    <!--TODO: add img-->
+                    <img src="upper.png" alt="" />
+
+
+                </td>
+                <td class="last-vertical first-and-last-vertical-size">
+                    <input type="checkbox" name="discountinued" />
+                    <img src="upper.png" alt="" />
+                </td>
+            </tr>
+        </thead>
+        <tfoot>
+            <!--TODO:Implement-->
+            <tr class="without-edges special-gradient last-vertical">
+                <td class="last-vertical" id="left-bottom" colspan="4">
+                    <img src="first-pic-bottom.png"
+                         alt="1" id="first-img" />
+                    <img src="second-bottom.png"
+                         alt="2" />
+                    <span class="pages">1</span>
+                    <span class="pages">2</span>
+                    <span class="pages">3</span>
+                    <span class="pages">4</span>
+                    <span class="pages">5</span>
+                    <span class="pages">6</span>
+                    <span class="pages">7</span>
+                    <span class="pages">8</span>
+                    <span class="pages">9</span>
+                    <span class="pages">10</span>
+                    <span>...</span>
+                    <img src="third-bottom.png"
+                         alt="3" />
+                    <img src="fourth-bottom.png"
+                         alt="4" />
+                    <span><label for="lebaled">Page size:</label></span>
+                    <select id="lebaled">
+                        <option selected="selected">10</option>
+                        <option>20</option>
+                        <option>30</option>
+                    </select>
+                </td>
+                <td class="last-vertical" id="right-bottom" colspan="2"><p>335104 items in 33511 pages</p></td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td class="first-and-last-vertical-size"><p>1</p></td>
+                <td class="name-cell-size"><p>Chai</p></td>
+                <td class="unit-size"><p>$18.00</p></td>
+                <td class="quantity-per-unit-size"><p>10 boxes x 20 bags</p></td>
+                <td class="unit-per-stock-size"><p>39</p></td>
+                <td class="last-vertical first-and-last-vertical-size"><form><input type="checkbox" name="discountinued" disabled /></form></td>
+            </tr>
+            <tr>
+                <td class="first-and-last-vertical-size"><p>2</p></td>
+                <td class="name-cell-size"><p>Chang</p></td>
+                <td class="unit-size"><p>$19.00</p></td>
+                <td class="quantity-per-unit-size"><p>24 - 12 oz bottles</p></td>
+                <td class="unit-per-stock-size"><p>17</p></td>
+                <td class="last-vertical first-and-last-vertical-size"><form><input type="checkbox" name="discountinued" disabled /></form></td>
+            </tr>
+            <tr>
+                <td class="first-and-last-vertical-size"><p>3</p></td>
+                <td class="name-cell-size"><p>Aniseed Syrup</p></td>
+                <td class="unit-size"><p>$10.00</p></td>
+                <td class="quantity-per-unit-size"><p>12 - 550 ml bottles</p></td>
+                <td class="unit-per-stock-size"><p>13</p></td>
+                <td class="last-vertical first-and-last-vertical-size"><form><input type="checkbox" name="discountinued" disabled /></form></td>
+            </tr>
+            <tr>
+                <td class="first-and-last-vertical-size"><p>4</p></td>
+                <td class="name-cell-size"><p>Chef Anton's Cajun Seasoning</p></td>
+                <td class="unit-size"><p>$22.00</p></td>
+                <td class="quantity-per-unit-size"><p>48 - 6 oz jars</p></td>
+                <td class="unit-per-stock-size"><p>53</p></td>
+                <td class="last-vertical first-and-last-vertical-size"><form><input type="checkbox" name="discountinued" disabled /></form></td>
+            </tr>
+            <tr>
+                <td class="first-and-last-vertical-size"><p>5</p></td>
+                <td class="name-cell-size"><p>Chef Anton's Gumbo Mix</p></td>
+                <td class="unit-size"><p>$21.35</p></td>
+                <td class="quantity-per-unit-size"><p>36 boxes</p></td>
+                <td class="unit-per-stock-size"><p>0</p></td>
+                <td class="last-vertical first-and-last-vertical-size"><form><input type="checkbox" name="discountinued" checked="checked" disabled /></form></td>
+            </tr>
+            <tr>
+                <td class="first-and-last-vertical-size"><p>6</p></td>
+                <td class="name-cell-size"><p>Grandma's Boysenberry Spread</p></td>
+                <td class="unit-size"><p>$25.00</p></td>
+                <td class="quantity-per-unit-size"><p>12 - 8 oz chars</p></td>
+                <td class="unit-per-stock-size"><p>120</p></td>
+                <td class="last-vertical first-and-last-vertical-size"><form><input type="checkbox" name="discountinued" disabled /></form></td>
+            </tr>
+            <tr>
+                <td class="first-and-last-vertical-size"><p>7</p></td>
+                <td class="name-cell-size"><p>uncle Bob's Organic Dried Pears</p></td>
+                <td class="unit-size"><p>$30.00</p></td>
+                <td class="quantity-per-unit-size"><p>12 - 1 lb pkgs.</p></td>
+                <td class="unit-per-stock-size"><p>15</p></td>
+                <td class="last-vertical first-and-last-vertical-size"><form><input type="checkbox" name="discountinued" disabled /></form></td>
+            </tr>
+            <tr>
+                <td class="first-and-last-vertical-size"><p>8</p></td>
+                <td class="name-cell-size"><p>Northwoods Cranberry Sauce</p></td>
+                <td class="unit-size"><p>$40.00</p></td>
+                <td class="quantity-per-unit-size"><p>12 - 12 oz jars</p></td>
+                <td class="unit-per-stock-size"><p>6</p></td>
+                <td class="last-vertical first-and-last-vertical-size"><form><input type="checkbox" name="discountinued" disabled /></form></td>
+            </tr>
+            <tr>
+                <td class="first-and-last-vertical-size"><p>9</p></td>
+                <td class="name-cell-size"><p>Mishi Kobe Niku</p></td>
+                <td class="unit-size"><p>$97.00</p></td>
+                <td class="quantity-per-unit-size"><p>18 - 500 g pkgs.</p></td>
+                <td class="unit-per-stock-size"><p>29</p></td>
+                <td class="last-vertical first-and-last-vertical-size">
+                    <form><input type="checkbox" name="discountinued" checked="checked" disabled /></form>
+                </td>
+            </tr>
+            <tr>
+                <td class="first-and-last-vertical-size"><p>10</p></td>
+                <td class="name-cell-size"><p>Ikura</p></td>
+                <td class="unit-size"><p>$31.00</p></td>
+                <td class="quantity-per-unit-size"><p>12 - 200 ml jars</p></td>
+                <td class="unit-per-stock-size"><p>31</p></td>
+                <td class="last-vertical first-and-last-vertical-size">
+                    <form><input type="checkbox" name="discountinued" disabled /></form>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,100 @@
+body,table,thead,tbody, tr, td,th, img,p,fieldset,legend,img{
+	margin: 0;
+	padding: 0;
+	border: none;
+	font-family: sans-serif;
+}
+
+#wrapper{
+	margin: 0 auto;
+	width: 1065px;
+	height: 776px;
+	border: 2px inset #373737 ;
+	border-radius: 10px;
+	font-size: 25px;
+}
+
+#wrapper #first-row{
+	height: 67px;
+}
+
+#wrapper #first-row th{
+	width: 
+	height: 67px;
+	text-align: center;
+}
+
+#wrapper #first-row th a{
+	color: #00ACEF;
+	text-decoration: underline;
+}
+
+#wrapper #second-row{
+	height: 700px;
+}
+
+#wrapper #second-row #info-table{
+	height: 650px;
+	width:712px;
+	padding: 15px;
+	border-top: 2px solid #373737;
+}
+
+#wrapper #second-row #info-table #second-row-table-apple-specs{
+	width: 690px;
+	height: 670px;
+	border: 2px solid #373737;
+	border-radius: 2px;
+	padding: 5px;
+}
+
+#wrapper #second-row #info-table #second-row-table-apple-specs tr td{
+	width: 345px;
+	height: 220px;
+}
+
+#wrapper #second-row #info-table #second-row-table-apple-specs tr td fieldset{
+	width: 324px;
+	height: 195px;
+	border: 2px solid #373737;
+	font-size: 18px;
+}
+
+#wrapper #second-row #info-table #second-row-table-apple-specs tr td fieldset legend{
+	width: 236px;
+	height: 18px;
+	text-align: center;
+}
+
+#wrapper #second-row #info-table #second-row-table-apple-specs tr td fieldset .fieldset-inner-styles{
+	width: 306px;
+	height: 161px;
+	text-align: center;
+	padding: 5px;
+}
+
+#wrapper #second-row #info-table #second-row-table-apple-specs tr td fieldset .fieldset-inner-styles tr{
+	height: 53px;
+}
+
+#wrapper #second-row #info-table #second-row-table-apple-specs tr td fieldset .fieldset-inner-styles tr td{
+	width: 144px;
+	height: 53px;
+	vertical-align: bottom;
+}
+
+#wrapper #second-row #info-table #second-row-table-apple-specs tr td fieldset .fieldset-inner-styles tr td img{
+	vertical-align: bottom;
+}
+
+#wrapper #second-row #price-table{
+	height: 650px;
+	width: 352px;
+	border-top: 2px solid #373737;
+}
+
+#wrapper #second-row #price-table table{
+	width: 350px;
+	height: 650px;
+	text-align: center;
+}

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Form</title>
+	<style type="text/css">
+		
+		table{
+			border: 1px solid black;
+			margin: 0 auto;
+			height: 455px;
+			font-size:13px;
+		}
+
+		td{
+			border-left: 1px solid gray;
+			border-top: 1px solid gray;
+		}
+
+		#footer{
+			background-color: #87CEEB;
+			text-align: center;
+		}
+
+		.without-border{
+			border-left: none;
+			font-weight: bold;
+			text-align: center;
+			width: 150px;
+		}
+
+		.without-top-border{
+			border-top: none;
+		}
+
+		#last-name, #first-name{
+			width: 240px;
+		}
+
+		#address-id{
+			width: 230px;
+		}
+
+		#city-id{
+			width: 170px;
+		}
+
+		#state-id{
+			width: 45px;
+		}
+
+		#comments-id{
+			width: 230px;
+		}
+		
+		.tel-simmilar{
+			width: 50px;
+		}
+
+		#third-tel-box{
+			width: 100px;
+		}
+
+		#mail-id{
+			width: 240px;
+		}
+	</style>
+</head>
+<body>
+	<form method="get">
+		<table cellpadding="2" cellspacing="0" >
+			<tr>
+				<td class="without-border without-top-border"><label for="last-name">Last name</label></td>
+				<td class="without-top-border">
+					<input type="text" name="Last name" id="last-name" maxlength="20"/>
+				</td>
+			</tr>
+			<tr>
+				<td class="without-border">First name</td>
+				<td>
+					<input type="text" name="First name" id="first-name" maxlength="20"/>
+				</td>
+			</tr>
+			<tr>
+				<td class="without-border">Address</td>
+				<td>
+					<textarea rows="4" cols="20" id="address-id"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td class="without-border">City</td>
+				<td>
+					<input type="text" name="City" id="city-id"/>
+					<span>State</span>
+					<input type="text" name="State" id="state-id" />
+				</td>
+			</tr>
+			<tr>
+				<td class="without-border"><label for="post-id">Zip/Postal code</label></td>
+				<td>
+					<input type="text"  name="Zip/Postal" pattern="[0-9]+" id="post-id"/>
+				</td>
+			</tr>
+			<tr>
+				<td class="without-border">Country</td>
+				<td>
+					<select>
+					  <option value="Bulgaria">Bulgaria</option>
+					  <option value="UK">United Kingdom</option>
+					  <option value="US">United States</option>
+					  <option value="Deutschland">Germany</option>
+					</select>	
+				</td>
+			</tr>
+			<tr>
+				<td class="without-border">Phone (country code, area code, number)</td>
+				<td>
+					<span>(+</span><input type="text" pattern="[0-9]" name="Phone" id="tel-id" class="tel-simmilar" /><span>)</span>
+					<input type="text" pattern="[0-9]" name="Phone"  class="tel-simmilar" />
+					<input type="text" pattern="[0-9]" name="Phone" id="third-tel-box" />
+				</td>
+			</tr>
+			<tr>
+				<td class="without-border">E-mail</td>
+				<td>
+					<input type="email" name="E-mail" id="mail-id"/>
+				</td>
+			</tr>
+			<tr>
+				<td class="without-border">Birth date</td>
+				<td>
+					<input type="datetime" name="birth date" id="birth-date" value="дд.мм.гггг г."/>
+				</td>
+			</tr>
+			<tr>
+				<td class="without-border">Gender</td>
+				<td>
+					<select>
+					  <option value="Male">Male</option>
+					  <option value="Women">Women</option>
+					  <option value="Other">Other</option>
+					</select>	
+				</td>
+			</tr>
+			<tr>
+				<td class="without-border">Starting date</td>
+				<td>
+					<input type="radio" name="starting spring date" id="spring-date"/>
+					<span>Spring 2015</span>
+					<input type="radio" name="starting summer date" id="summer-date"/>
+					<span>Summer 2015</span>
+				</td>
+			</tr>
+			<tr>
+				<td class="without-border">Comments/Questions</td>
+				<td>
+					<textarea rows="5" cols="20" id="comments-id"></textarea>
+				</td>
+			</tr>
+			<tr id="footer">
+				<td class="without-border" colspan="2">
+				<form action="get">
+					<input type="submit" value="Submit" />
+					<input type="reset" value="Clear this form"/>
+					</form>
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
