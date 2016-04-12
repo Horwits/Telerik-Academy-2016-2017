@@ -8,8 +8,8 @@ class BitAtPositionExtractor
 
         string inputPosition = Console.ReadLine();
 
-        int number;
-        bool inputNumberIsValid = int.TryParse(inputNumber, out number);
+        long number;
+        bool inputNumberIsValid = long.TryParse(inputNumber, out number);
 
         int position;
         bool inputPositionIsValid = int.TryParse(inputPosition, out position);
@@ -17,8 +17,8 @@ class BitAtPositionExtractor
         if (inputNumberIsValid)
         {
             int mask = 1 << position;
-            int nAndMask = number & mask;
-            int bit = nAndMask >> position;
+            long nAndMask = number & mask;
+            long bit = nAndMask >> position;
 
             Console.WriteLine("{0}", bit);
         }
