@@ -37,7 +37,7 @@ class Program
                 result = 1;
                 if (inputIsValid)
                 {
-                    Console.WriteLine("{0}", result += userDouble);
+                    Console.WriteLine("{0:f2}", result += userDouble);
                 }
 
                 break;
