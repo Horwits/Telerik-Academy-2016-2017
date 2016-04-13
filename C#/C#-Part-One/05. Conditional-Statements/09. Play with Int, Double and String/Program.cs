@@ -44,9 +44,7 @@ class Program
 
             case "text":
                 input = Console.ReadLine();
-
                 Console.WriteLine("{0}", input + "*");
-
                 break;
         }
     }
