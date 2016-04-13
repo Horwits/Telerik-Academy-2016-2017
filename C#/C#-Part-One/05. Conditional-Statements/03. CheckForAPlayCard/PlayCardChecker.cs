@@ -10,7 +10,7 @@ class PlayCardChecker
 
         if (FindIfCardIsValid(card))
         {
-            Console.WriteLine("yes {0}", card.ToLower());
+            Console.WriteLine("yes {0}", card.ToUpper());
         }
         else
         {
