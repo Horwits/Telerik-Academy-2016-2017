@@ -34,7 +34,7 @@ class BonusScoreAplier
                 Console.WriteLine(score);
                 break;
             default:
-                Console.WriteLine("invalid score.");
+                Console.WriteLine("invalid score");
                 break;
         }
     }
