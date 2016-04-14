@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 1 – 2-4-8", "Problem 1 – 2-4-8\Problem 1 – 2-4-8.csproj", "{23CFA41F-B5F2-48ED-BA82-3725773871D4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 2 - Nightmare", "Problem 2 - Nightmare\Problem 2 - Nightmare.csproj", "{AC2009B1-CB46-46AC-AB69-9A30E8C2008B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 3 - Enigmanation", "Problem 3 - Enigmanation\Problem 3 - Enigmanation.csproj", "{A7F499AD-7F80-4F4D-8696-5CDA22B7384B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{23CFA41F-B5F2-48ED-BA82-3725773871D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23CFA41F-B5F2-48ED-BA82-3725773871D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23CFA41F-B5F2-48ED-BA82-3725773871D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC2009B1-CB46-46AC-AB69-9A30E8C2008B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC2009B1-CB46-46AC-AB69-9A30E8C2008B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC2009B1-CB46-46AC-AB69-9A30E8C2008B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC2009B1-CB46-46AC-AB69-9A30E8C2008B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7F499AD-7F80-4F4D-8696-5CDA22B7384B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7F499AD-7F80-4F4D-8696-5CDA22B7384B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7F499AD-7F80-4F4D-8696-5CDA22B7384B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7F499AD-7F80-4F4D-8696-5CDA22B7384B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

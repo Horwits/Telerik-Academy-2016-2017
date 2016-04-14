@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{23CFA41F-B5F2-48ED-BA82-3725773871D4}</ProjectGuid>
+    <ProjectGuid>{A7F499AD-7F80-4F4D-8696-5CDA22B7384B}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Problem_1___2_4_8</RootNamespace>
-    <AssemblyName>Problem 1 – 2-4-8</AssemblyName>
+    <RootNamespace>Problem_3___Enigmanation</RootNamespace>
+    <AssemblyName>Problem 3 - Enigmanation</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TwoFourEight.cs" />
+    <Compile Include="Enigmanation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
