@@ -1,22 +1,97 @@
-﻿using System;
+﻿//using System;
+
+//class SpiralMatrix
+//{
+//    static void Main()
+//    {
+//        int n = int.Parse(Console.ReadLine());
+
+//        int[,] matrix = new int[n, n];
+//        bool[,] usedPlaces = new bool[n, n];
+//        int currentValue = 1;
+//        int currentRow = 0;
+//        int currentCol = 0;
+//        string direction = "right";
+//        while (currentValue <= n * n)
+//        {
+//            matrix[currentRow, currentCol] = currentValue;
+//            usedPlaces[currentRow, currentCol] = true;
+//            currentValue++;
+//            if (direction == "right")
+//            {
+//                if (currentCol == n - 1 || usedPlaces[currentRow, currentCol + 1] == true)
+//                {
+//                    direction = "down";
+//                    currentRow++;
+//                }
+//                else
+//                {
+//                    currentCol++;
+//                }
+
+//            }
+//            else if (direction == "down")
+//            {
+//                if (currentRow == n - 1 || usedPlaces[currentRow + 1, currentCol] == true)
+//                {
+//                    direction = "left";
+//                    currentCol--;
+//                }
+//                else
+//                {
+//                    currentRow++;
+//                }
+//            }
+//            else if (direction == "left")
+//            {
+//                if (currentCol == 0 || usedPlaces[currentRow, currentCol - 1] == true)
+//                {
+//                    direction = "up";
+//                    currentRow--;
+//                }
+//                else
+//                {
+//                    currentCol--;
+//                }
+//            }
+//            else if (direction == "up")
+//            {
+//                if (currentRow == 0 || usedPlaces[currentRow - 1, currentCol] == true)
+//                {
+//                    direction = "right";
+//                    currentCol++;
+//                }
+//                else
+//                {
+//                    currentRow--;
+//                }
+//            }
+//        }
+
+//        for (int row = 0; row < matrix.GetLength(0); row++)
+//        {
+//            for (int col = 0; col < matrix.GetLength(1); col++)
+//            {
+//                Console.Write("{0} ", matrix[row, col]);
+//            }
+
+//            Console.WriteLine();
+//        }
+
+//        Console.WriteLine();
+//    }
+//}
+
+using System;
 
 class SpiralMatrix
 {
     static void Main()
     {
-        /*Write a program that reads from the console a positive integer number n (1 ≤ n ≤ 20) and prints a matrix holding the numbers from 1 to n*n in the form of square spiral like in the examples below.
-        
-        n = 2   matrix      n = 3   matrix      n = 4   matrix
-        1 2                 1 2 3               1  2  3  4
-        4 3                 8 9 4               12 13 14 5
-                            7 6 5               11 16 15 6
-                                                10 9  8  7
-        */
-
         string userInput = Console.ReadLine();
 
         int n;
-        bool userInputIsValid = int.TryParse(userInput, out n) && (1 <= n && n <= 20);
+        bool userInputIsValid = int.TryParse(userInput, out n);
         if (userInputIsValid)
         {
             int[,] matrix = new int[n, n];
@@ -90,13 +165,16 @@ class SpiralMatrix
 
     private static void PrintMatrix(int[,] matrix, int n)
     {
-        for (int i = 0; i < n; i++)
+        for (int row = 0; row < matrix.GetLength(0); row++)
         {
-            for (int j = 0; j < n; j++)
+            for (int col = 0; col < matrix.GetLength(1); col++)
             {
-                Console.Write("{0} ", matrix[i, j]);
+                Console.Write("{0} ", matrix[row, col]);
             }
+
             Console.WriteLine();
         }
+
+        Console.WriteLine();
     }
 }

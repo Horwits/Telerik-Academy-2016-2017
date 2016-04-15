@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Numerics;
 
 class Factorial
 {
@@ -16,7 +17,7 @@ class Factorial
         int n = int.Parse(Console.ReadLine());
         int k = int.Parse(Console.ReadLine());
 
-        decimal factorialN = 1,
+        BigInteger factorialN = 1,
             factorialK = 1;
         for (int i = 1; i <= n; i++)
         {
@@ -28,7 +29,7 @@ class Factorial
             factorialN *= i;
         }
 
-        decimal result = factorialN / factorialK;
+        decimal result = (decimal)(factorialN / factorialK);
         Console.WriteLine("{0}", result);
     }
 }

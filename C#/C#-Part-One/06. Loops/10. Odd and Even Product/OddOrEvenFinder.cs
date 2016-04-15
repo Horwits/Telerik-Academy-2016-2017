@@ -24,7 +24,7 @@ class OddOrEvenFinder
         var inputToArray = input.Split(' ');
 
         bool numberIsValid = false;
-        int oddProduct = 1,
+        long oddProduct = 1,
             evenProduct = 1;
         for (int i = 0; i < n; i++)
         {
@@ -55,7 +55,7 @@ class OddOrEvenFinder
             }
             else
             {
-                Console.WriteLine("no {0} {1}", oddProduct, evenProduct);
+                Console.WriteLine("no {0} {1}", evenProduct, oddProduct);
             }
         }
         else
