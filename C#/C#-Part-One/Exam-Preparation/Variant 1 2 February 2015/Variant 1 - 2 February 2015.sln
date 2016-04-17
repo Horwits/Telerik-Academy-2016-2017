@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 2 - Encoding Sum", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 3 – Maslan", "Problem 3 – Maslan\Problem 3 – Maslan.csproj", "{A42C5950-37FA-471F-A9F5-FB5781AEE0B3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 5 – Sequences of Bits", "Problem 5 – Sequences of Bits\Problem 5 – Sequences of Bits.csproj", "{3DD6516C-0AE5-48B1-BE08-E8AC6D5797BB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{A42C5950-37FA-471F-A9F5-FB5781AEE0B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A42C5950-37FA-471F-A9F5-FB5781AEE0B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A42C5950-37FA-471F-A9F5-FB5781AEE0B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DD6516C-0AE5-48B1-BE08-E8AC6D5797BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DD6516C-0AE5-48B1-BE08-E8AC6D5797BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DD6516C-0AE5-48B1-BE08-E8AC6D5797BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DD6516C-0AE5-48B1-BE08-E8AC6D5797BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

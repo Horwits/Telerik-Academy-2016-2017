@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 2 – Text to Numbe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 3 – Saddy Kopper", "Problem 3 – Saddy Kopper\Problem 3 – Saddy Kopper.csproj", "{12580771-0561-4314-B6AB-C7B1CC997CCB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 5 – Bits to Bits", "Problem 5 – Bits to Bits\Problem 5 – Bits to Bits.csproj", "{17D0337C-726F-483F-8F6B-39EE601694DB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{12580771-0561-4314-B6AB-C7B1CC997CCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12580771-0561-4314-B6AB-C7B1CC997CCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{12580771-0561-4314-B6AB-C7B1CC997CCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17D0337C-726F-483F-8F6B-39EE601694DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17D0337C-726F-483F-8F6B-39EE601694DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17D0337C-726F-483F-8F6B-39EE601694DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17D0337C-726F-483F-8F6B-39EE601694DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
