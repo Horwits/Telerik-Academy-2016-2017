@@ -33,20 +33,28 @@ class ConsoleApplication1Solution
             {
                 long product = 1;
 
-                foreach (var digit in input)
-                {
-                    if (char.IsDigit(digit) && digit != '0')
-                    {
-                        product *= digit - '0';
-                    }
-                }
-
                 if (counter <= 10)
                 {
+                    foreach (var digit in input)
+                    {
+                        if (char.IsDigit(digit) && digit != '0')
+                        {
+                            product *= digit - '0';
+                        }
+                    }
+
                     productTillTen *= product;
                 }
                 else
                 {
+                    foreach (var digit in input)
+                    {
+                        if (char.IsDigit(digit) && digit != '0')
+                        {
+                            product *= digit - '0';
+                        }
+                    }
+
                     productAfterTen *= product;
                 }
             }
