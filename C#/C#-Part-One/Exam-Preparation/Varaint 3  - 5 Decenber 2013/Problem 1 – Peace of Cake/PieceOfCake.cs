@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Numerics;
 
 class PieceOfCake
 {
@@ -10,14 +9,15 @@ class PieceOfCake
         decimal c = decimal.Parse(Console.ReadLine());
         decimal d = decimal.Parse(Console.ReadLine());
 
-        decimal resultFraction = (a / b) + (c / d);
-        bool hasFullCake = resultFraction >= 1;
+        decimal resultNominator = ((a * d) + (c * b));
+        decimal resultDenominator = (b * d);
 
-        BigInteger resultNominator = (BigInteger)((a * d) + (c * b));
-        BigInteger resultDenominator = (BigInteger)(b * d);
+        decimal resultFraction = (resultNominator / resultDenominator);
+
+        bool hasFullCake = resultFraction >= 1;
         if (hasFullCake)
         {
-            Console.WriteLine((BigInteger)resultFraction);
+            Console.WriteLine((int)resultFraction);
         }
         else
         {

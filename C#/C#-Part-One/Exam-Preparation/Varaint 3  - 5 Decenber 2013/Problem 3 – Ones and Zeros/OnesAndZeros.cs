@@ -46,6 +46,7 @@ class OnesAndZeros
                         Console.Write("###");
                         break;
                 }
+
                 break;
         }
     }
@@ -79,7 +80,6 @@ class OnesAndZeros
                 {
                     case 0:
                         Console.Write("###.");
-
                         break;
                     case 1:
                         Console.Write("#.#.");
@@ -102,20 +102,20 @@ class OnesAndZeros
     {
         int n = int.Parse(Console.ReadLine());
 
-        string nToBin = Convert.ToString(n, 2).PadLeft(16, '0');
-        int length = nToBin.Length;
+        string binary = Convert.ToString(n, 2).PadLeft(32, '0');
+        string lastBits = binary.Substring(16, 16);
 
         for (int i = 0; i < 5; i++)
         {
-            for (int j = 0; j < length; j++)
+            for (int j = 0; j < 16; j++)
             {
-                if (j == length - 1)
+                if (j == 15)
                 {
-                    PrintBinaryLastDigit(nToBin[j], i);
+                    PrintBinaryLastDigit(lastBits[j], i);
                 }
                 else
                 {
-                    PrintBinary(nToBin[j], i);
+                    PrintBinary(lastBits[j], i);
                 }
             }
 
