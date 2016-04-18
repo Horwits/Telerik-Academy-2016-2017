@@ -4,58 +4,122 @@ class PersianRugs
 {
     static void Main()
     {
-        int n = 5;//int.Parse(Console.ReadLine());
-        int d = 10;//int.Parse(Console.ReadLine());
+        int n = int.Parse(Console.ReadLine());
+        int d = int.Parse(Console.ReadLine());
 
         int canvasWidth = 2 * n + 1,
-            canvasHeight = canvasWidth,
-            outterDashLength = 0,
-            emptyPartLength = canvasWidth - 2;
+            firstPartHeight = n,
+            outterDashLength = 0;
 
-        for (int i = 0; i < n; i++)
+        if (d > n)
         {
-            Console.Write(new string('#', outterDashLength));
-            Console.Write(new string('\\', 1));
-            if (d > n)
+            int innerEmptySpace = canvasWidth - (outterDashLength + 2);
+
+            for (int i = 0; i < firstPartHeight; i++)
             {
-                Console.Write(new string(' ', emptyPartLength));
-                emptyPartLength-=2;
+                Console.Write(new string('#', outterDashLength));
+                Console.Write(new string('\\', 1));
+                Console.Write(new string(' ', innerEmptySpace));
+                Console.Write(new string('/', 1));
+                Console.WriteLine(new string('#', outterDashLength));
+
+                innerEmptySpace -= 2;
+                outterDashLength++;
             }
-            else
-            {
 
-            }
+            //middle row
+            Console.Write(new string('#', n));
+            Console.Write(new string('X', 1));
+            Console.WriteLine(new string('#', n));
 
-            Console.Write(new string('/', 1));
-            Console.WriteLine(new string('#', outterDashLength));
-
-            outterDashLength++;
-        }
-
-        //middle row
-        Console.Write(new string('#', n));
-        Console.Write(new string('X', 1));
-        Console.WriteLine(new string('#', n));
-
-        emptyPartLength += 2;
-        for (int i = 0; i < n; i++)
-        {
+            innerEmptySpace = 1;
             outterDashLength--;
 
-            Console.Write(new string('#', outterDashLength));
-            Console.Write(new string('/', 1));
-            if (d > n)
+            for (int i = 0; i < firstPartHeight; i++)
             {
-                Console.Write(new string(' ', emptyPartLength));
-                emptyPartLength += 2;
+                Console.Write(new string('#', outterDashLength));
+                Console.Write(new string('/', 1));
+                Console.Write(new string(' ', innerEmptySpace));
+                Console.Write(new string('\\', 1));
+                Console.WriteLine(new string('#', outterDashLength));
+
+                innerEmptySpace += 2;
+                outterDashLength--;
             }
-            else
+        }
+        else
+        {
+            int innerEmptySpace = canvasWidth - (outterDashLength + 2),
+                innerDots = canvasWidth - (4 + 2 * d);
+
+            for (int i = 0; i < firstPartHeight; i++)
             {
+                if (innerDots > 0)
+                {
+                    Console.Write(new string('#', outterDashLength));
+                    Console.Write(new string('\\', 1));
+                    Console.Write(new string(' ', d));
+                    Console.Write(new string('\\', 1));
 
+                    Console.Write(new string('.', innerDots));
+
+                    Console.Write(new string('/', 1));
+                    Console.Write(new string(' ', d));
+                    Console.Write(new string('/', 1));
+                    Console.WriteLine(new string('#', outterDashLength));
+                }
+                else
+                {
+                    Console.Write(new string('#', outterDashLength));
+                    Console.Write(new string('\\', 1));
+                    Console.Write(new string(' ', innerEmptySpace));
+                    Console.Write(new string('/', 1));
+                    Console.WriteLine(new string('#', outterDashLength));
+                }
+
+                innerDots -= 2; 
+                innerEmptySpace -= 2;
+                outterDashLength++;
             }
 
-            Console.Write(new string('\\', 1));
-            Console.WriteLine(new string('#', outterDashLength));
+            //middle row
+            Console.Write(new string('#', n));
+            Console.Write(new string('X', 1));
+            Console.WriteLine(new string('#', n));
+
+            outterDashLength--;
+            innerEmptySpace = 1;
+            innerDots += 2;
+
+            for (int i = 0; i < firstPartHeight; i++)
+            {
+                if (innerDots > 0)
+                {
+                    Console.Write(new string('#', outterDashLength));
+                    Console.Write(new string('/', 1));
+                    Console.Write(new string(' ', d));
+                    Console.Write(new string('/', 1));
+
+                    Console.Write(new string('.', innerDots));
+
+                    Console.Write(new string('\\', 1));
+                    Console.Write(new string(' ', d));
+                    Console.Write(new string('\\', 1));
+                    Console.WriteLine(new string('#', outterDashLength));
+                }
+                else
+                {
+                    Console.Write(new string('#', outterDashLength));
+                    Console.Write(new string('/', 1));
+                    Console.Write(new string(' ', innerEmptySpace));
+                    Console.Write(new string('\\', 1));
+                    Console.WriteLine(new string('#', outterDashLength));
+                }
+
+                innerDots += 2;
+                innerEmptySpace += 2;
+                outterDashLength--;
+            }
         }
     }
 }
