@@ -1,59 +1,26 @@
 ﻿using System;
+using System.IO;
 using System.Text;
 
 class Solution
 {
     static void Main()
     {
-        int k = int.Parse(Console.ReadLine());
-
-        int n = int.Parse(Console.ReadLine());
-
-        var concatenated = new StringBuilder();
-        for (int i = 0; i < n; i++)
+        var reader = new StreamReader(@"..\..\test.txt");
+        using (reader)
         {
-            concatenated.Append(Convert.ToString(int.Parse(Console.ReadLine()), 2));
-        }
+            int k = int.Parse(reader.ReadLine());
 
-        Console.WriteLine(concatenated.ToString());
+            int n = int.Parse(reader.ReadLine());
 
-        int length = concatenated.Length,
-            counter = 1,
-            sequenceCounter = 0;
-
-        if (k == 1)
-        {
-            sequenceCounter = length;
-        }
-        else
-        {
-            for (int i = 0; i < length - 1; i++)
+            var concatenated = new StringBuilder();
+            for (int i = 0; i < n; i++)
             {
-                int j = i + 1;
-                if (j < length)
-                {
-                    if (concatenated[i] == concatenated[j])
-                    {
-                        counter++;
-                        if (j + 1 < length)
-                        {
-                            if (counter == k)
-                            {
-                                if (concatenated[i] != concatenated[j + 1])
-                                {
-                                    sequenceCounter++;
-                                }
-                            }
-                        }
-                    }
-                    else
-                    {
-                        counter = 1;
-                    }
-                }
+                concatenated.Append(Convert.ToString(int.Parse(reader.ReadLine()), 2));
             }
-        }
 
-        Console.WriteLine(sequenceCounter);
+            Console.WriteLine(concatenated.ToString());
+
+        }
     }
 }

@@ -9,19 +9,27 @@ class Solution
 
         int copyK = k;
 
-        var digitToStrB = new StringBuilder();
-
-        for (int i = 0; i < 3; i++)
+        if (copyK > 9)
         {
-            int lastDigit = copyK % 10;
+            var digitToStrB = new StringBuilder();
 
-            digitToStrB.Append(lastDigit).Append(copyK / 10);
-
-            copyK = int.Parse(digitToStrB.ToString());
-
-            if (i != 2)
+            for (int i = 0; i < 3; i++)
             {
-                digitToStrB.Clear();
+                int lastDigit = copyK % 10;
+
+                digitToStrB.Append(lastDigit).Append(copyK / 10);
+
+                copyK = int.Parse(digitToStrB.ToString());
+
+                if (copyK < 9)
+                {
+                    break;
+                }
+
+                if (i != 2)
+                {
+                    digitToStrB.Clear();
+                }
             }
         }
 
