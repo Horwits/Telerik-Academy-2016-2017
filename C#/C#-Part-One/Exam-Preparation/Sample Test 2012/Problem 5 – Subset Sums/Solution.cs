@@ -1,47 +1,54 @@
 ﻿using System;
 
-class Solution
+class SubsetSums
 {
-    //TODO : fix the solution
-    static void Main()
+    static void Main(string[] args)
     {
-        decimal s = decimal.Parse(Console.ReadLine());
-
-        byte n = byte.Parse(Console.ReadLine());
-
-        var numbers = new decimal[n];
-
+        long s = long.Parse(Console.ReadLine());
+        int n = Int32.Parse(Console.ReadLine());
+        long[] numbers = new long[n];
         for (int i = 0; i < n; i++)
         {
-            numbers[i] = decimal.Parse(Console.ReadLine());
+            numbers[i] = long.Parse(Console.ReadLine());
         }
 
-        int counter = 0;
-
-        for (int i = 0; i < n; i++)
+        int[] currentCombination = new int[n];
+        int result = 0;
+        for (int i = 1; i <= n; i++)
         {
-            var currentNum = numbers[i];
-            if (currentNum == s)
+            GenerateCombinationsRecursively(ref numbers, i, 0, -1, ref currentCombination, s, ref result);
+        }
+        Console.WriteLine(result);
+    }
+
+    static void GenerateCombinationsRecursively(ref long[] elements, int klass, int currentPosition, int numberOnPrevPosition, ref int[] currentCombination, long sum, ref int result)
+    {
+        int n = elements.Length;
+        for (int u = numberOnPrevPosition + 1; u < n; u++)
+        {
+            currentCombination[currentPosition] = u;
+            if (currentPosition == klass - 1)
             {
-                counter++;
+                CalculateCombinationSum(klass, ref elements, ref currentCombination, ref result, ref sum);
             }
-
-            decimal currentSum = 0;
-            for (int j = i + 1; j < n; j++)
+            else
             {
-                currentSum += currentNum + numbers[j];
-
-                if (currentSum == s)
-                {
-                    counter++;
-                }
-                else
-                {
-                    currentSum = 0;
-                }
+                GenerateCombinationsRecursively(ref elements, klass, currentPosition + 1, u, ref currentCombination, sum, ref result);
             }
         }
+    }
 
-        Console.WriteLine(counter);
+    static void CalculateCombinationSum(int klass, ref long[] elements, ref int[] currentCombination, ref int result, ref long sum)
+    {
+        long currentSum = 0;
+        for (int u = 0; u < klass; u++)
+        {
+            int currentIndex = currentCombination[u];
+            currentSum += elements[currentIndex];
+        }
+        if (currentSum == sum)
+        {
+            result++;
+        }
     }
 }
