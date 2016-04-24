@@ -1,147 +1,152 @@
 ﻿using System;
-using System.Text;
 
-class Expression
+class Program
 {
     static void Main()
     {
         string expression = Console.ReadLine();
 
-        decimal result = 0m,
-            resultInBracket = 0m;
-
+        double result = 0,
+            resultInBracket = 0;
         char currentOperator = '+',
-            currentOperatorInBracket = '+';
+            operatorInBracket = '+';
 
-        int currentNumber = 0,
-            currentNumberInBracket = 0;
-
-        bool isInBracket = false,
-            isChanged = false;
-
-        foreach (char symbol in expression)
+        bool isInBracket = false;
+        foreach (var symbol in expression)
         {
-            if (symbol == '(')
+            if (symbol == '=')
             {
-                isInBracket = true;
+                Console.WriteLine("{0:f2}", result);
+                break;
             }
-            else if (symbol == ')')
+            else if (symbol == '+')
             {
-                isInBracket = false;
-                switch (currentOperator)
+                if (isInBracket)
                 {
-                    case '+':
-                        result += resultInBracket;
-                        break;
-                    case '-':
-                        result -= resultInBracket;
-                        break;
-                    case '*':
-                        result *= resultInBracket;
-                        break;
-                    case '/':
-                        result /= resultInBracket;
-                        break;
+                    operatorInBracket = '+';
                 }
-
-                resultInBracket = 0;
-                currentOperatorInBracket = '+';
-            }
-
-            if (!isInBracket)
-            {
-                if (char.IsDigit(symbol))
-                {
-                    currentNumber = symbol - '0';
-                    isChanged = true;
-                }
-
-                if (symbol == '+')
+                else
                 {
                     currentOperator = '+';
                 }
-                if (symbol == '-')
+
+                continue;
+            }
+            else if (symbol == '-')
+            {
+                if (isInBracket)
+                {
+                    operatorInBracket = '-';
+                }
+                else
                 {
                     currentOperator = '-';
                 }
-                if (symbol == '*')
+                continue;
+            }
+            else if (symbol == '/')
+            {
+                if (isInBracket)
                 {
-                    currentOperator = '*';
+                    operatorInBracket = '/';
                 }
-                if (symbol == '/')
+                else
                 {
                     currentOperator = '/';
                 }
 
-                if (isChanged)
-                {
-                    switch (currentOperator)
-                    {
-                        case '+':
-                            result += currentNumber;
-                            break;
-                        case '-':
-                            result -= currentNumber;
-                            break;
-                        case '*':
-                            result *= currentNumber;
-                            break;
-                        case '/':
-                            result /= currentNumber;
-                            break;
-                    }
-                }
-
-                isChanged = false;
+                continue;
             }
-            else
+            else if (symbol == '*')
             {
-                if (char.IsDigit(symbol))
+                if (isInBracket)
                 {
-                    currentNumberInBracket = symbol - '0';
-                    isChanged = true;
+                    operatorInBracket = '*';
+                }
+                else
+                {
+                    currentOperator = '*';
                 }
 
-                if (symbol == '+')
+                continue;
+            }
+            else if (symbol == '(')
+            {
+                isInBracket = true;
+                continue;
+            }
+            else if (symbol == ')')
+            {
+                isInBracket = false;
+                if (currentOperator == '+' && !isInBracket)
                 {
-                    currentOperatorInBracket = '+';
+                    result += resultInBracket;
                 }
-                if (symbol == '-')
+                else if (currentOperator == '-' && !isInBracket)
                 {
-                    currentOperatorInBracket = '-';
+                    result -= resultInBracket;
                 }
-                if (symbol == '*')
+                else if (currentOperator == '/' && !isInBracket)
                 {
-                    currentOperatorInBracket = '*';
+                    result /= resultInBracket;
                 }
-                if (symbol == '/')
+                else if (currentOperator == '*' && !isInBracket)
                 {
-                    currentOperatorInBracket = '/';
-                }
-
-                if (isChanged)
-                {
-                    switch (currentOperatorInBracket)
-                    {
-                        case '+':
-                            resultInBracket += currentNumberInBracket;
-                            break;
-                        case '-':
-                            resultInBracket -= currentNumberInBracket;
-                            break;
-                        case '*':
-                            resultInBracket *= currentNumberInBracket;
-                            break;
-                        case '/':
-                            resultInBracket /= currentNumberInBracket;
-                            break;
-                    }
+                    result *= resultInBracket;
                 }
 
-                isChanged = false;
+                operatorInBracket = '+';
+                resultInBracket = 0;
+                continue;
+            }
+
+            //result
+            if (currentOperator == '+' && !isInBracket)
+            {
+                result += symbol - '0';
+            }
+            else if (currentOperator == '-' && !isInBracket)
+            {
+                result -= symbol - '0';
+            }
+            else if (currentOperator == '/' && !isInBracket)
+            {
+                result /= symbol - '0';
+            }
+            else if (currentOperator == '*' && !isInBracket)
+            {
+                result *= symbol - '0';
+            }
+
+            //result in bracket
+            if (operatorInBracket == '+')
+            {
+                if (isInBracket)
+                {
+                    resultInBracket += symbol - '0';
+                }
+            }
+            else if (operatorInBracket == '-')
+            {
+                if (isInBracket)
+                {
+                    resultInBracket -= symbol - '0';
+                }
+            }
+            else if (operatorInBracket == '/')
+            {
+                if (isInBracket)
+                {
+                    resultInBracket /= symbol - '0';
+                }
+            }
+            else if (operatorInBracket == '*')
+            {
+                if (isInBracket)
+                {
+                    resultInBracket *= symbol - '0';
+                }
             }
         }
-
-        Console.WriteLine("{0:f2}", result);
     }
 }
