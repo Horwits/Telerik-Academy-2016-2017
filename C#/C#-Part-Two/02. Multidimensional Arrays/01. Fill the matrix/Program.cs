@@ -200,8 +200,16 @@ class Program
         {
             for (int j = 0; j < n; j++)
             {
-                Console.Write("{0} ", matrix[i, j]);
+                if (j == n - 1)
+                {
+                    Console.Write("{0}", matrix[i, j]);
+                }
+                else
+                {
+                    Console.Write("{0} ", matrix[i, j]);
+                }
             }
+
             Console.WriteLine();
         }
 
@@ -209,8 +217,8 @@ class Program
 
     static void Main()
     {
-        string userInput = "5";// Console.ReadLine();
-        string letter = "c";//Console.ReadLine().ToLower();
+        string userInput = Console.ReadLine();
+        string letter = Console.ReadLine().ToLower();
 
         int n;
         bool userInputIsValid = int.TryParse(userInput, out n) && (1 <= n && n <= 128);

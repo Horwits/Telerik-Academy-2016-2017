@@ -55,6 +55,9 @@ class Program
 
         Quicksort(numbers, 0, n - 1);
 
-        Console.WriteLine(string.Join("\n\r", numbers));
+        foreach (var item in numbers)
+        {
+            Console.WriteLine(item);
+        }
     }
 }

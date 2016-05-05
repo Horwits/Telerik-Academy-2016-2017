@@ -5,7 +5,7 @@ class Program
 {
     static public void DoMerge(int[] numbers, int left, int mid, int right)
     {
-        int[] temp = new int[25];
+        int[] temp = new int[right + 1];
         int i, left_end, num_elements, tmp_pos;
 
         left_end = (mid - 1);
@@ -66,6 +66,10 @@ class Program
         }
         
         MergeSort_Recursive(numbers, 0, n - 1);
-        Console.WriteLine(string.Join("\n\r", numbers));
+
+        foreach (var item in numbers)
+        {
+            Console.WriteLine(item);
+        }
     }
 }

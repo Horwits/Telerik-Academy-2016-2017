@@ -47,6 +47,9 @@ class Program
 
         numbers = SelectionSort(numbers, n);
 
-        Console.WriteLine(string.Join("\n\r", numbers));
+        foreach (var item in numbers)
+        {
+            Console.WriteLine(item);
+        }
     }
 }

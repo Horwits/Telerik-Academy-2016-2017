@@ -2,26 +2,16 @@
 
 class Program
 {
-    static void PrintArrayOnConsole<T> (T[] collection)
-        where T : IComparable
-    {
-        foreach (var item in collection)
-        {
-            Console.WriteLine(item.ToString());
-        }
-    }
-
-
     static void Main()
     {
-        byte inputNumber = byte.Parse(Console.ReadLine());
+        int length = int.Parse(Console.ReadLine());
 
-        short[] products = new short[inputNumber];
-        for (byte i = 0; i < inputNumber; i++)
+        int[] array = new int[length];
+
+        for (int i = 0; i < length; i++)
         {
-            products[i] = (short)(i * inputNumber);
+            array[i] = 5 * i;
+            Console.WriteLine(array[i]);
         }
-
-        PrintArrayOnConsole(products);
     }
 }

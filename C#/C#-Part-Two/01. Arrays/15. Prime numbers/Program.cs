@@ -24,6 +24,7 @@ class Program
                 }
             }
         }
+
         return primes;
     }
 
@@ -32,8 +33,6 @@ class Program
         var n = int.Parse(Console.ReadLine());
 
         var numbers = GetAllPrimesLessThan(n);
-
-        //Console.WriteLine(string.Join(" ", numbers));
 
         int lastPosition = numbers.Count - 1;
         Console.WriteLine(numbers[lastPosition]);
