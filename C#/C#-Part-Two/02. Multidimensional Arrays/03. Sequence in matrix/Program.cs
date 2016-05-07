@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 class Program
 {
@@ -111,7 +112,7 @@ class Program
             col = 0,
             row = 0;
 
-        while (row + 1 < matrix.GetLength(0))
+        while (row + 1 < matrix.GetLength(0) && col + 1 < matrix.GetLength(1))
         {
             var currentElement = matrix[row, col];
             var nextElement = matrix[row + 1, col + 1];
@@ -141,7 +142,7 @@ class Program
             col = matrix.GetLength(1) - 1,
             row = 0;
 
-        while (row + 1 < matrix.GetLength(0))
+        while (row + 1 < matrix.GetLength(0) && col - 1 > -1)
         {
             var currentElement = matrix[row, col];
             var nextElement = matrix[row + 1, col - 1];
@@ -178,12 +179,7 @@ class Program
         var longestLeftDiagonal = GetLongestLeftDiagonalSequenceLength(matrix);
         var longestRightDiagonal = GetLongestRightDiagonalSequenceLength(matrix);
 
-        //Console.WriteLine(longestCol);
-        //Console.WriteLine(longestRow);
-        //Console.WriteLine(longestLeftDiagonal);
-        //Console.WriteLine(longestRightDiagonal);
-
-        var result = Math.Max(Math.Max(longestCol, longestRow), Math.Max(longestLeftDiagonal,longestRightDiagonal));
+        var result = Math.Max(Math.Max(longestCol, longestRow), Math.Max(longestLeftDiagonal, longestRightDiagonal));
         Console.WriteLine(result);
     }
 }
