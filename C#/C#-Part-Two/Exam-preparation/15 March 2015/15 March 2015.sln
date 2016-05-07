@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Sum of Differences", "0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Lover of three", "03. Lover of three\03. Lover of three.csproj", "{9871A458-2DFB-4B0F-82D7-62CAA870435E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. The Cat Ate it", "05. The Cat Ate it\05. The Cat Ate it.csproj", "{70AE00C8-B329-457E-BBA6-B8A62B0D9F18}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{9871A458-2DFB-4B0F-82D7-62CAA870435E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9871A458-2DFB-4B0F-82D7-62CAA870435E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9871A458-2DFB-4B0F-82D7-62CAA870435E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70AE00C8-B329-457E-BBA6-B8A62B0D9F18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70AE00C8-B329-457E-BBA6-B8A62B0D9F18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70AE00C8-B329-457E-BBA6-B8A62B0D9F18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70AE00C8-B329-457E-BBA6-B8A62B0D9F18}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -42,8 +42,8 @@ class Program
 
     static void Main()
     {
-        string inputOne = Console.ReadLine();
-        string inputTwo = Console.ReadLine();
+        string inputOne = Console.ReadLine().ToLower();
+        string inputTwo = Console.ReadLine().ToLower();
 
         var firstArray = inputOne.ToCharArray();
         var secondArray = inputTwo.ToCharArray();
