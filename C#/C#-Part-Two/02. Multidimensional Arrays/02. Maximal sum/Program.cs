@@ -48,11 +48,12 @@ class Program
 
         var matrix = GetMatrixFromInput(n, m);
 
-        int sum = int.MinValue;
-        for (int row = 0; row < n; row++)
+        int maxSum = int.MinValue,
+            currentSum = 0;
+
+        for (int row = 0; row < n - 2; row++)
         {
-            int currentSum = 0;
-            for (int col = 0; col < m; col++)
+            for (int col = 0; col < m - 2; col++)
             {
                 if (col + 2 < m && row + 2 < n)
                 {
@@ -68,10 +69,12 @@ class Program
                         matrix[row + 2, col + 2];
                 }
 
-                sum = Math.Max(sum, currentSum);
+                maxSum = Math.Max(maxSum, currentSum);
+
+                currentSum = 0;
             }
         }
 
-        Console.WriteLine(sum);
+        Console.WriteLine(maxSum);
     }
 }
