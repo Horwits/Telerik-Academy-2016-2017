@@ -1,6 +1,8 @@
 ﻿using System;
 using System.IO;
 
+//TODO: 100/100
+//current state 80/100
 class Program
 {
     static string[,] GetMatrixFromInput(int n, int m)
@@ -9,7 +11,10 @@ class Program
 
         for (int i = 0; i < n; i++)
         {
-            var currentInputRow = Console.ReadLine().Split(' ');
+            var currentInputRow = Console.ReadLine()
+                .ToLower()
+                .Trim(' ')
+                .Split(' ');
             for (int j = 0; j < m; j++)
             {
                 matrix[i, j] = currentInputRow[j];
@@ -31,7 +36,7 @@ class Program
             if (row == matrix.GetLength(0) - 1)
             {
                 col++;
-                if (col == matrix.GetLength(1) - 1)
+                if (col == matrix.GetLength(1))
                 {
                     break;
                 }
@@ -168,7 +173,10 @@ class Program
     static void Main()
     {
         string heightAndWidth = Console.ReadLine();
-        var splitted = heightAndWidth.Split(' ');
+        var splitted = heightAndWidth
+            .Trim(' ')
+            .Split(' ');
+
         int n = int.Parse(splitted[0]);
         int m = int.Parse(splitted[1]);
 
