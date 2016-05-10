@@ -72,7 +72,7 @@ class MathUtils
 
         Console.WriteLine(ReturnMaximalNumber(input));
 
-        Console.WriteLine(ReturnAverageNumber(input));
+        Console.WriteLine("{0:f2}", ReturnAverageNumber(input));
 
         Console.WriteLine(ReturnSumNumber(input));
 

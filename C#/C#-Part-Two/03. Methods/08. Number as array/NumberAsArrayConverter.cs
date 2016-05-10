@@ -80,7 +80,6 @@ class NumberAsArrayConverter
 
         var result = CalculateTwoNumbersRepresentedAsArrays(firstNumber, secondNumber, numberOneLength, numberTwoLength);
 
-        Console.Clear();
         PrintNumberSeparatedBySpacesToConsole(result);
     }
 }

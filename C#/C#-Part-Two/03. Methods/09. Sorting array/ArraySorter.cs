@@ -30,30 +30,15 @@ class ArraySorter
         return maxNumber;
     }
 
-    static HashSet<int> SortArrayInDescendingOrder(int[] array)
-    {
-        var result = new HashSet<int>();
-        int length = array.Length;
-        for (int i = 0; i < length; i++)
-        {
-            for (int j = 0; j < length; j++)
-            {
-
-            }
-        }
-
-        return result;
-    }
-
     static void Main()
     {
         var length = int.Parse(Console.ReadLine());
         var inputArray = Console.ReadLine().Split(' ');
 
         var numbers = GenerateIntArray(inputArray);
-
-        Console.WriteLine(string.Join(", ", numbers));
-        Console.WriteLine(ReturnMaxNumber(numbers, 3));
+        Array.Sort(numbers);
+        Console.WriteLine(string.Join(" ", numbers));
+        //Console.WriteLine(ReturnMaxNumber(numbers, 3));
         //TODO: finishing the task.
     }
 }
