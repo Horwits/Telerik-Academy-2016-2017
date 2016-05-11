@@ -17,7 +17,7 @@ class IntegerSumator
 
     static void Main()
     {
-        string input = "43 68 9 23 318";
+        string input = Console.ReadLine();
 
         Console.WriteLine(SumValuesOfString(input));
     }

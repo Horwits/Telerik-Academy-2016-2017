@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Decimal to binary", "01. Decimal to binary\01. Decimal to binary.csproj", "{5556F621-D576-46B6-963C-154CA9C86304}"
 EndProject
@@ -16,6 +16,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. Binary to hexadecimal", "06. Binary to hexadecimal\06. Binary to hexadecimal.csproj", "{BBB815AD-0F02-48FD-8FAF-7CDAA601111B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08. Binary short", "08. Binary short\08. Binary short.csproj", "{808035BF-2C56-45F1-9FAC-61CE48F81A6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. One system to any other", "07. One system to any other\07. One system to any other.csproj", "{0763DA94-A747-45DD-99CD-D3304B036D59}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{808035BF-2C56-45F1-9FAC-61CE48F81A6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{808035BF-2C56-45F1-9FAC-61CE48F81A6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{808035BF-2C56-45F1-9FAC-61CE48F81A6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0763DA94-A747-45DD-99CD-D3304B036D59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0763DA94-A747-45DD-99CD-D3304B036D59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0763DA94-A747-45DD-99CD-D3304B036D59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0763DA94-A747-45DD-99CD-D3304B036D59}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

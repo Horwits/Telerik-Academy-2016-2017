@@ -3,7 +3,6 @@ using System.Text;
 
 class BinaryShortGenerator
 {
-	//TODO: Signed solution fix
     static string ReverseString(string input)
     {
         int length = input.Length;
@@ -16,48 +15,49 @@ class BinaryShortGenerator
         return result.ToString();
     }
 
-    static void Main()
+    static string ConvertFromShortToBinary(short n)
     {
-        short n = short.Parse(Console.ReadLine());
         var copyN = n;
+        var appender = new StringBuilder();
 
-        var binaryResult = new StringBuilder();
-        while (copyN != 0)
+        for (int i = 0; i < 16; i++)
         {
-            int digit = copyN % 2;
-            copyN /= 2;
-
+            var digit = copyN % 2;
             if (n < 0)
             {
-                if (digit == -1)
+                if (digit == 0)
                 {
-                    binaryResult.Append(0);
+                    appender.Append(1);
                 }
                 else
                 {
-                    binaryResult.Append(1);
+                    appender.Append(0);
                 }
-
             }
             else
             {
-                binaryResult.Append(digit);
+                appender.Append(digit);
+
             }
+
+            copyN /= 2;
         }
 
+        var negativeResult = ReverseString(appender.ToString());
         if (n < 0)
         {
-            int length = binaryResult.Length;
-            binaryResult = binaryResult.Remove(0, 1);
-
-            string revertedResult = binaryResult.ToString();
-
-            Console.WriteLine(ReverseString(revertedResult) + '1');
+            int number_one = Convert.ToInt32(negativeResult, 2);
+            int number_two = Convert.ToInt32("0000000000000001", 2);
+            return (Convert.ToString(number_one + number_two, 2));
         }
-        else
-        {
-            string revertedResult = binaryResult.ToString();
-            Console.WriteLine(ReverseString(revertedResult).PadLeft(16, '0'));
-        }
+
+        return negativeResult;
+    }
+
+    static void Main()
+    {
+        short n = short.Parse(Console.ReadLine());
+
+        Console.WriteLine(ConvertFromShortToBinary(n));
     }
 }
