@@ -3,46 +3,65 @@ using System.Text;
 
 class DecimalToHexadecimalConverter
 {
-    static string ConvertDecimalToHex(long number)
+    //static string ConvertDecimalToHex(long number)
+    //{
+    //    var reversedResult = new StringBuilder();
+    //    while (number != 0)
+    //    {
+    //        int currentDigit = (int)(number % 16);
+    //        if (currentDigit < 10)
+    //        {
+    //            reversedResult.Append(currentDigit);
+    //        }
+    //        else
+    //        {
+    //            switch (currentDigit)
+    //            {
+    //                case 10: reversedResult.Append('A'); break;
+    //                case 11: reversedResult.Append('B'); break;
+    //                case 12: reversedResult.Append('C'); break;
+    //                case 13: reversedResult.Append('D'); break;
+    //                case 14: reversedResult.Append('E'); break;
+    //                case 15: reversedResult.Append('F'); break;
+    //            }
+    //        }
+    //
+    //        number /= 16;
+    //    }
+    //
+    //    string result = reversedResult.ToString();
+    //    return result;
+    //}
+    //
+    //static string ReverseString(string input)
+    //{
+    //    var reversedResult = new StringBuilder();
+    //    int length = input.Length;
+    //    for (int i = length - 1; i >= 0; i--)
+    //    {
+    //        reversedResult.Append(input[i]);
+    //    }
+    //
+    //    string result = reversedResult.ToString();
+    //    return result;
+    //}
+    //
+
+    const string HexDigits = "0123456789ABCDEF";
+
+    static string ConvertDecimalToHex(long decValue)
     {
-        var reversedResult = new StringBuilder();
-        while (number != 0)
+        // better performance could be achieved by using indexing instead of concatanation
+        string result = string.Empty;
+
+        do
         {
-            int currentDigit = (int)(number % 16);
-            if (currentDigit < 10)
-            {
-                reversedResult.Append(currentDigit);
-            }
-            else
-            {
-                switch (currentDigit)
-                {
-                    case 10: reversedResult.Append('A'); break;
-                    case 11: reversedResult.Append('B'); break;
-                    case 12: reversedResult.Append('C'); break;
-                    case 13: reversedResult.Append('D'); break;
-                    case 14: reversedResult.Append('E'); break;
-                    case 15: reversedResult.Append('F'); break;
-                }
-            }
+            int value = (int)(decValue % 16);
+            result = HexDigits[value] + result;
+            decValue /= 16;
 
-            number /= 16;
-        }
+        } while (decValue != 0);
 
-        string result = reversedResult.ToString();
-        return result;
-    }
-
-    static string ReverseString(string input)
-    {
-        var reversedResult = new StringBuilder();
-        int length = input.Length;
-        for (int i = length - 1; i >= 0; i--)
-        {
-            reversedResult.Append(input[i]);
-        }
-
-        string result = reversedResult.ToString();
         return result;
     }
 
@@ -52,6 +71,7 @@ class DecimalToHexadecimalConverter
         long number = long.Parse(Console.ReadLine());
 
         var result = ConvertDecimalToHex(number);
-        Console.WriteLine(ReverseString(result));
+        //Console.WriteLine(ReverseString(result));
+        Console.WriteLine(result);
     }
 }

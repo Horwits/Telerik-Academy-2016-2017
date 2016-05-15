@@ -5,7 +5,7 @@ class HexToBinaryConverter
 {
     static string ConvertHexToBinary(string input)
     {
-        string[] Nybbles =
+        string[] bites =
             {
                 "0000", "0001", "0010", "0011",
                 "0100", "0101", "0110", "0111",
@@ -13,16 +13,16 @@ class HexToBinaryConverter
                 "1100", "1101", "1110", "1111"
             };
 
-        StringBuilder result = new StringBuilder(input.Length * 4);
+        var result = new StringBuilder(input.Length * 4);
         foreach (char c in input)
         {
             if (c >= '0' && c <= '9')
             {
-                result.Append(Nybbles[c - '0']);
+                result.Append(bites[c - '0']);
             }
             else if (c >= 'a' && c <= 'f')
             {
-                result.Append(Nybbles[c - 'a' + 10]);
+                result.Append(bites[c - 'a' + 10]);
             }
             else
             {
