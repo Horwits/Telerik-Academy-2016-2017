@@ -33,7 +33,7 @@ class SquareRoot
         try
         {
             double sqrt = CalculateSquareRootOfInteger(Console.ReadLine());
-            Console.WriteLine(sqrt);
+            Console.WriteLine("{0:f3}", sqrt);
         }
         catch (ArgumentException ae)
         {
