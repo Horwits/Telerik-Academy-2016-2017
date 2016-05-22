@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 class UrlParser
 {
@@ -10,10 +6,16 @@ class UrlParser
     {
         string text = Console.ReadLine();
 
-        var splitted = text.Split(new char[] { '/' }, StringSplitOptions.RemoveEmptyEntries);
+        int indexOfTwoSlashes = text.IndexOf("//");
+        string protocol = text.Substring(0, indexOfTwoSlashes);
+        Console.WriteLine("[protocol] = {0}", protocol.TrimEnd(':'));
 
-        Console.WriteLine("[protocol] = {0}//", splitted[0]);
-        Console.WriteLine("[server] = {0}", splitted[1]);
-        Console.WriteLine("[resource] = {0}", string.Join("/", splitted, 2, splitted.Length - 2));
+        int indexOfOneSlash = text.IndexOf('/', indexOfTwoSlashes + 2);
+        string server = text.Substring(indexOfTwoSlashes + 2, indexOfOneSlash - indexOfTwoSlashes - 2);
+        Console.WriteLine("[server] = {0}", server);
+
+        string resource = text.Substring(indexOfOneSlash);
+        Console.WriteLine("[resource] = {0}", resource);
+
     }
 }

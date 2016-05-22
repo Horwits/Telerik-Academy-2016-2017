@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Lover of three", "03. L
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. The Cat Ate it", "05. The Cat Ate it\05. The Cat Ate it.csproj", "{70AE00C8-B329-457E-BBA6-B8A62B0D9F18}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Brackets", "04. Brackets\04. Brackets.csproj", "{7DDCD855-F597-480A-8523-65B41A0F5120}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{70AE00C8-B329-457E-BBA6-B8A62B0D9F18}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70AE00C8-B329-457E-BBA6-B8A62B0D9F18}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70AE00C8-B329-457E-BBA6-B8A62B0D9F18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DDCD855-F597-480A-8523-65B41A0F5120}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DDCD855-F597-480A-8523-65B41A0F5120}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DDCD855-F597-480A-8523-65B41A0F5120}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DDCD855-F597-480A-8523-65B41A0F5120}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

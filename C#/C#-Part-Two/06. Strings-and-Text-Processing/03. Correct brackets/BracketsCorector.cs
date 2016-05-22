@@ -1,8 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 
 class BracketsCorector
 {
-    static void PrintOnConsoleIfBracketsAreCorrect(string expression)
+    /*static void PrintOnConsoleIfBracketsAreCorrect(string expression)
     {
         int openBracketIndex = 0;
         int closeBracketIndex = 0;
@@ -54,12 +55,36 @@ class BracketsCorector
         {
             Console.WriteLine("Incorrect");
         }
-    }
+    }*/
 
     static void Main()
     {
         var expression = Console.ReadLine();
 
-        PrintOnConsoleIfBracketsAreCorrect(expression);
+        Stack<int> stack = new Stack<int>();
+        bool correctBrackets = true;
+        for (int index = 0; index < expression.Length; index++)
+        {
+            char ch = expression[index];
+            if (ch == '(')
+            {
+                stack.Push(index);
+            }
+            else if (ch == ')')
+            {
+                if (stack.Count == 0)
+                {
+                    correctBrackets = false;
+                    break;
+                }
+                stack.Pop();
+            }
+        }
+        if (stack.Count != 0)
+        {
+            correctBrackets = false;
+        }
+
+        Console.WriteLine(correctBrackets ? "Correct" : "Incorrect");
     }
 }

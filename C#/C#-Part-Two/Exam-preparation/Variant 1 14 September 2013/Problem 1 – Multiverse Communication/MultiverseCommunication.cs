@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.Numerics;
 using System.Text;
-using System.Threading.Tasks;
 
 class MultiverseCommunication
 {
@@ -61,11 +59,27 @@ class MultiverseCommunication
         return result.ToString();
     }
 
+    static BigInteger ConvertFromAnyToDecimal(string number, int currentBase)
+    {
+        string characters = "0123456789ABCDEF";
+
+        int length = number.Length;
+        BigInteger result = 0;
+        for (int i = 0; i < length; i++)
+        {
+            result = result * currentBase + characters.IndexOf(number[i]);
+        }
+
+        return result;
+    }
+
     static void Main()
     {
         string input = Console.ReadLine();
 
         var message = ConvertInput(input);
-        Console.WriteLine(message);
+        var result = ConvertFromAnyToDecimal(message, 13);
+
+        Console.WriteLine(result);
     }
 }

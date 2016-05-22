@@ -1,20 +1,39 @@
 ﻿using System;
+using System.Globalization;
+using System.Linq;
 using System.Text;
+using System.Threading;
 
 class CharecterLiteralsExtractor
 {
-    static void Main()
+    static string EncodeNonAsciiCharacters(string value)
     {
-        Encoding utf8 = Encoding.UTF8;
-
-        string text = Console.ReadLine();
-
-        var result = new StringBuilder();
-        foreach (var item in text)
+        StringBuilder sb = new StringBuilder();
+        foreach (char c in value)
         {
-            result.AppendFormat("\\u{0:X4} ", (int)item);
+            // This character is too big for ASCII
+            string encodedValue = "\\u" + ((int)c).ToString("x4").ToUpper();
+            sb.Append(encodedValue);
         }
 
-        Console.WriteLine(result.ToString().TrimEnd());
+        return sb.ToString();
+    }
+
+    static void Main()
+    {
+        CultureInfo currentCulture = Thread.CurrentThread.CurrentUICulture;
+        
+        string text = Console.ReadLine();
+
+        Console.WriteLine(EncodeNonAsciiCharacters(text));
+
+        //var result = new StringBuilder();
+        //foreach (var item in text)
+        //{
+        //    result.AppendFormat(@"\u{0:X4}", (ushort)item);
+        //}
+        //
+        //Console.WriteLine(result.ToString().TrimEnd());
+
     }
 }

@@ -1,54 +1,92 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 class TagsParser
 {
-    static void Main()
+    static void Solution(string text)
     {
-        //string text = "<upcase>Lorem</upcase> ipsum dolor sit amet, consectetur adipiscing elit, sed do <upcase>eiusmod tempor</upcase> incididunt ut labore et dolore <upcase>magna aliqua</upcase>. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure <upcase>dolor</upcase> in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est <upcase>laborum</upcase>.";//Console.ReadLine();
+        var openTag = "upcase";
+        var closeTag = "/upcase";
 
-        string text = Console.ReadLine();
+        var toParse = text
+            .Split(new char[] { '<', '>' })
+            .ToArray();
 
-        int indexOpenTag = 0,
-            indexCloseTag = 0,
-            foundOpenTag = text.IndexOf("</", indexOpenTag),
-            foundCloseTag = text.IndexOf('>', indexCloseTag);
+        var output = new StringBuilder();
+        var toUpper = false;
 
-        string upcase = "<upcase>";
-        int upcaseLength = upcase.Length;
-        var sbText = new StringBuilder();
-
-        while (foundOpenTag != -1 && foundCloseTag != -1)
+        foreach (var word in toParse)
         {
-            var before = text.Substring(0, foundCloseTag - upcaseLength + 1);
-            var sub = text.Substring(foundCloseTag + 1, foundOpenTag - foundCloseTag - 1).ToUpper();
-            var after = text.Substring((foundOpenTag + 1) + upcaseLength);
-
-            sbText.Append(before)
-                .Append(sub)
-                .Append(after);
-
-            text = sbText.ToString();
-            sbText.Clear();
-
-            indexOpenTag = foundOpenTag + 1;
-            indexCloseTag = foundOpenTag + upcaseLength;
-
-            if (indexOpenTag < text.Length && indexCloseTag < text.Length)
+            if (word == openTag)
             {
-                foundOpenTag = text.IndexOf("</", indexOpenTag);
-                foundCloseTag = text.IndexOf('>', indexCloseTag);
+                toUpper = true;
+                continue;
+            }
+
+            if (word == closeTag)
+            {
+                toUpper = false;
+                continue;
+            }
+
+            if (toUpper)
+            {
+                output.Append(word.ToUpper());
             }
             else
             {
-                foundOpenTag = -1;
-                foundCloseTag = -1;
+                output.Append(word);
             }
         }
 
-        Console.WriteLine(text);
+        Console.WriteLine(output);
+    }
+
+
+    /*static string RemoveTagsAndExecuteThem(string text)
+    {
+        var result = new StringBuilder(text);
+
+        string openTagPattern = "<upcase>";
+        string closeTagPattern = "</upcase>";
+
+        int indexCloseTag = text.IndexOf(closeTagPattern),
+        indexOpenTag = text.IndexOf(openTagPattern);
+
+        while (indexOpenTag != -1 && indexCloseTag != -1)
+        {
+            var sub = result.ToString().Substring(indexOpenTag + openTagPattern.Length, indexCloseTag - (indexOpenTag + openTagPattern.Length));
+            result.Replace(sub, sub.ToUpper());
+
+            result.Remove(indexOpenTag, openTagPattern.Length);
+            result.Remove(indexCloseTag - openTagPattern.Length, closeTagPattern.Length);
+
+            if (indexCloseTag > result.Length)
+            {
+                indexCloseTag = -1;
+            }
+            else
+            {
+                indexCloseTag = result.ToString().IndexOf(closeTagPattern, indexCloseTag + 1);
+            }
+
+            if (indexOpenTag > result.Length)
+            {
+                indexOpenTag = -1;
+            }
+            else
+            {
+                indexOpenTag = result.ToString().IndexOf(openTagPattern, indexOpenTag + 1);
+            }
+        }
+
+        return result.ToString();
+    }*/
+
+    static void Main()
+    {
+        string text = Console.ReadLine();
+        Solution(text);
     }
 }
