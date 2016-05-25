@@ -4,8 +4,8 @@ class SquareRoot
 {
     public static double CalculateSquareRootOfInteger(string inputNumber)
     {
-        int number = 0;
-        bool isNumberValid = int.TryParse(inputNumber, out number);
+        double number = 0;
+        bool isNumberValid = double.TryParse(inputNumber, out number);
 
         double squareRoot = 0;
         if (isNumberValid)
@@ -16,13 +16,18 @@ class SquareRoot
         {
             if (!isNumberValid)
             {
-                throw new ArgumentException("Invalid number");
+                throw new FormatException("Invalid number");
             }
 
-            if (number > 0)
+            if (number < 0)
             {
                 throw new FormatException("Invalid number");
             }
+        }
+
+        if (squareRoot.ToString() == "NaN")
+        {
+            throw new ArgumentException("Invalid number");
         }
 
         return squareRoot;
@@ -32,7 +37,7 @@ class SquareRoot
     {
         try
         {
-            double sqrt = CalculateSquareRootOfInteger(Console.ReadLine());
+            var sqrt = CalculateSquareRootOfInteger(Console.ReadLine());
             Console.WriteLine("{0:f3}", sqrt);
         }
         catch (ArgumentException ae)
@@ -45,7 +50,7 @@ class SquareRoot
         }
         finally
         {
-            Console.WriteLine("Goodbye");
+            Console.WriteLine("Good bye");
         }
     }
 }

@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1 – TRES4 Numbers", "1 – TRES4 Numbers\1 – TRES4 Numbers.csproj", "{4AFE05BC-B234-4F3F-9ACC-FDB88A564125}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2 - BunnyFactory", "2 - BunnyFactory\2 - BunnyFactory.csproj", "{8BAB53FA-8538-459F-B0BD-E26FB3883C41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mazalo", "mazalo\mazalo.csproj", "{5BCB19A9-7461-4B70-B46A-61CF3A10B4FC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{4AFE05BC-B234-4F3F-9ACC-FDB88A564125}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4AFE05BC-B234-4F3F-9ACC-FDB88A564125}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4AFE05BC-B234-4F3F-9ACC-FDB88A564125}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BAB53FA-8538-459F-B0BD-E26FB3883C41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BAB53FA-8538-459F-B0BD-E26FB3883C41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BAB53FA-8538-459F-B0BD-E26FB3883C41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BAB53FA-8538-459F-B0BD-E26FB3883C41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BCB19A9-7461-4B70-B46A-61CF3A10B4FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BCB19A9-7461-4B70-B46A-61CF3A10B4FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BCB19A9-7461-4B70-B46A-61CF3A10B4FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BCB19A9-7461-4B70-B46A-61CF3A10B4FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
