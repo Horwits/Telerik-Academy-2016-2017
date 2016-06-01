@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1 - DeCatCOding", "1 - DeCa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2 - IncreasingAbsoluteDifferences", "2 - IncreasingAbsoluteDifferences\2 - IncreasingAbsoluteDifferences.csproj", "{2618BA79-47CB-405C-A427-8647D47BD102}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4. CATastrophe", "4. CATastrophe\4. CATastrophe.csproj", "{7C3C05A3-11EB-4505-BAC1-4667073F8372}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1.1. DecatCoding", "1.1. DecatCoding\1.1. DecatCoding.csproj", "{4A3BEC64-6878-4127-95BE-88CE5169E3A7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{2618BA79-47CB-405C-A427-8647D47BD102}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2618BA79-47CB-405C-A427-8647D47BD102}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2618BA79-47CB-405C-A427-8647D47BD102}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C3C05A3-11EB-4505-BAC1-4667073F8372}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C3C05A3-11EB-4505-BAC1-4667073F8372}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C3C05A3-11EB-4505-BAC1-4667073F8372}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C3C05A3-11EB-4505-BAC1-4667073F8372}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A3BEC64-6878-4127-95BE-88CE5169E3A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A3BEC64-6878-4127-95BE-88CE5169E3A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A3BEC64-6878-4127-95BE-88CE5169E3A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A3BEC64-6878-4127-95BE-88CE5169E3A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

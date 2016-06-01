@@ -5,6 +5,12 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1 - Zerg", "1 - Zerg\1 - Zerg.csproj", "{52160963-3EF2-4BED-81A4-CF799E4BB6D2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2. MovingLetters", "2. MovingLetters\2. MovingLetters.csproj", "{C07EE3C3-4162-4E5B-9C19-20A13EA8CD65}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4. EncodeAndEncrypt", "4. EncodeAndEncrypt\4. EncodeAndEncrypt.csproj", "{9ACD4E5A-9C28-4520-A745-196F577106A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5. TheyAreGreen", "5. TheyAreGreen\5. TheyAreGreen.csproj", "{BB92600F-1325-4E30-A91A-B249532A439C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{52160963-3EF2-4BED-81A4-CF799E4BB6D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52160963-3EF2-4BED-81A4-CF799E4BB6D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52160963-3EF2-4BED-81A4-CF799E4BB6D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C07EE3C3-4162-4E5B-9C19-20A13EA8CD65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C07EE3C3-4162-4E5B-9C19-20A13EA8CD65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C07EE3C3-4162-4E5B-9C19-20A13EA8CD65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C07EE3C3-4162-4E5B-9C19-20A13EA8CD65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9ACD4E5A-9C28-4520-A745-196F577106A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9ACD4E5A-9C28-4520-A745-196F577106A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9ACD4E5A-9C28-4520-A745-196F577106A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9ACD4E5A-9C28-4520-A745-196F577106A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB92600F-1325-4E30-A91A-B249532A439C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB92600F-1325-4E30-A91A-B249532A439C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB92600F-1325-4E30-A91A-B249532A439C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB92600F-1325-4E30-A91A-B249532A439C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

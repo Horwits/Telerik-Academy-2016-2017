@@ -1,127 +1,165 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Numerics;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace mazalo
+﻿namespace BunnyFactory
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            var cages = new List<int>()
-            {
-                54,
-                39,
-                28,
-                39,
-                63,
-                49,
-                64,
-                64,
-                60,
-                48,
-                74,
-                52,
-                50,
-                13,
-                84,
-                56,
-                97,
-                8 ,
-                19,
-                87,
-                49,
-                81,
-                94,
-                74,
-                16,
-                84,
-                62,
-                66,
-                21,
-                8 ,
-                68,
-                32,
-                97,
-                11,
-                9 ,
-                56,
-                43,
-                49,
-                27,
-                70,
-                8 ,
-                71,
-                81,
-                28,
-                33,
-                59,
-                57,
-                49,
-                51,
-                28,
-                34,
-                78,
-                78,
-                85,
-                94,
-                73,
-                45,
-                54,
-                24,
-                78,
-                86,
-                98,
-                45,
-                53,
-                79,
-                43,
-                55,
-                40,
-                5 ,
-                29,
-                14,
-                50,
-                80,
-                49,
-                80,
-                78,
-                2 ,
-                68,
-                42,
-                57,
-                29,
-                14,
-                17,
-                93,
-                74,
-                90,
-                53,
-                13,
-                17,
-                36,
-                12,
-                88,
-                26,
-                48,
-                83,
-                10,
-                28,
-                29,
-                48,
-                89
-            };
+    using System;
+    using System.Collections.Generic;
+    using System.Numerics;
 
-            BigInteger sum = 1;
-            for (int i = 1; i < 54; i++)
+    class BF
+    {
+        static List<int> bunnyCages;
+        static string result;
+
+        static void Initialize()
+        {
+            ReadInput();
+            result = string.Empty;
+        }
+
+        static void ReadInput()
+        {
+            bunnyCages = new List<int>();
+
+            string currentCage = Console.ReadLine();
+
+            while (currentCage != "END")
             {
-                sum *= cages[i];
+                bunnyCages.Add(int.Parse(currentCage));
+                currentCage = Console.ReadLine();
+            }
+        }
+
+        static string CalculateSumOfNumbers(List<int> listOfNumbers)
+        {
+            BigInteger sum = 0;
+
+            foreach (var number in listOfNumbers)
+            {
+                sum += number;
             }
 
-            Console.WriteLine(sum);
+            return sum.ToString();
+        }
+
+        static string CalculateProductOfNumbers(List<int> listOfNumbers)
+        {
+            BigInteger product = 1;
+
+            foreach (var number in listOfNumbers)
+            {
+                product *= number;
+            }
+
+            return product.ToString();
+        }
+
+        static void Calculate()
+        {
+            int counter = 1;
+
+            while (true)
+            {
+                if (!NextConversion(counter))
+                {
+                    break;
+                }
+
+                counter++;
+            }
+        }
+
+        static bool NextConversion(int counter)
+        {
+            if (counter >= bunnyCages.Count)
+            {
+                return false;
+            }
+
+            int firstCage = 0;
+
+            for (int i = 0; i < counter; i++)
+            {
+                firstCage += bunnyCages[i];
+            }
+
+            if (firstCage >= bunnyCages.Count)
+            {
+                return false;
+            }
+
+            List<int> bunniesToTransfer = new List<int>();
+
+            for (int i = counter; i < counter + firstCage; i++)
+            {
+                bunniesToTransfer.Add(bunnyCages[i]);
+            }
+
+            string sum = CalculateSumOfNumbers(bunniesToTransfer);
+            string product = CalculateProductOfNumbers(bunniesToTransfer);
+
+            List<int> nextCages = new List<int>();
+            foreach (var symbol in sum)
+            {
+                AddSymbol(nextCages, symbol);
+            }
+
+            foreach (var symbol in product)
+            {
+                AddSymbol(nextCages, symbol);
+            }
+
+            for (int i = counter + firstCage; i < bunnyCages.Count; i++)
+            {
+                foreach (var symbol in bunnyCages[i].ToString())
+                {
+                    AddSymbol(nextCages, symbol);
+                }
+            }
+
+            bunnyCages = nextCages;
+            return true;
+        }
+
+        static void AddSymbol(List<int> symbols, char symbol)
+        {
+            if (symbol != '0' && symbol != '1')
+            {
+                symbols.Add(symbol - '0');
+            }
+        }
+
+        static void PrintResult()
+        {
+            result = string.Join(" ", bunnyCages);
+            Console.WriteLine(result);
+        }
+
+        static void Main()
+        {
+            //Initialize();
+            //Calculate();
+            //PrintResult();
+
+            var currentNextCages = "2-14567";
+
+            var cages = new List<string>();
+
+            var currentStr = string.Empty;
+            for (int j = 0; j < currentNextCages.Length; j++)
+            {
+                var symbol = currentNextCages[j];
+                if (symbol == '-')
+                {
+                    currentStr = symbol.ToString() + currentNextCages[j + 1];
+                }
+                else
+                {
+                    currentStr = symbol.ToString();
+                }
+
+                cages.Add(currentStr);
+            }
+
+            Console.WriteLine(string.Join(" ", cages));
         }
     }
 }

@@ -1,0 +1,29 @@
+READ CAREFULLY
+
+READ INPUT
+
+READ WHAT SHOULD BE OUTPUTTED
+
+READ THE CONSTRAINS -> THAT WILL GIVE YOU THE HINT OF WHAT DATA STRUCTURE TO USE
+
+DO A PLAN OF YOUR SOLUTION
+	IS THIS PLAN THE BEST? 
+	IS THERE A BETTER SOLUTION?
+	WHAT CAN CAUSE PROBLEMS?
+	WHAT ARE THE BORDER CASES?
+	WHERE THIS SOLUTION CAN BREAK?
+
+THINK OF THE BEST DATA STRUCTURES ->
+	THE STRINGBUILDER IS A LOT FASTER THAN THE CHAR ARRAY, THE LIST<CHAR> AND THE STRINGS
+
+1. Task - i have all the algorithms needed.
+
+2. Task
+	- if we have to jump postions to the right -> if the jump is bigger than the length jump%length will give the position , also the jump will be from the position at most cases so 0 + 3, 1 + 3 etc.
+	- if we have to jump position to the left -> jump%length and if it is < 0 ? jump + length
+	- if we have to use char array or str -> the stringbuilder is the fastest
+
+3. 
+
+4. PLAN BEFORE CODING
+	-if we have to encrypt something like aabaaa -> aab3a -> see the encrypt and encode from varant 2 14 september 2013 -> 2 while -> watch for the overflow , and the last symbol

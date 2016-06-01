@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Numerics;
-using System.Text;
-using System.Threading.Tasks;
 
+//  80/100 -> 1st test and 2nd test 
+//when molly is finished in this case dolly doesn't have to get flowers but if i change it it will ruin other tests
+
+//rewrite it
 class Solution
 {
     static void Main()
     {
-        Console.WriteLine(9000000000000000001 % 8);
-
         var path = Console.ReadLine()
                             .Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
                             .Select(x => long.Parse(x))
@@ -91,31 +89,27 @@ class Solution
             else if (dollyNoFlowersOnCurrentPosition && !mollyNoFlowersOnCurrentPosition)
             {
                 Console.WriteLine("Molly");
-                Console.WriteLine("{0} {1}", dollyTotalFlowers, mollyTotalFlowers);
+                Console.WriteLine("{0} {1}", mollyTotalFlowers, dollyTotalFlowers);
                 break;
             }
             else if (dollyNoFlowersOnCurrentPosition && mollyNoFlowersOnCurrentPosition)
             {
                 Console.WriteLine("Draw");
+                Console.WriteLine("{0} {1}", mollyTotalFlowers, dollyTotalFlowers);
                 break;
             }
 
             mollyNextPosition = mollyCurrentPosition + path[(long)mollyCurrentPosition];
             if (mollyNextPosition > length - 1)
             {
-                while (mollyNextPosition > length)
-                {
-                    mollyNextPosition -= length;
-                }
+                mollyNextPosition %= length;
             }
 
             dollyNextPosition = dollyCurrentPosition - path[(long)dollyCurrentPosition];
             if (dollyNextPosition < 0)
             {
-                while (dollyNextPosition <= 0)
-                {
-                    dollyNextPosition += length;
-                }
+                dollyNextPosition %= length;
+                dollyNextPosition += length;
             }
 
             if (!areAtSamePos)
@@ -130,8 +124,6 @@ class Solution
 
             mollyCurrentPosition = mollyNextPosition;
             dollyCurrentPosition = dollyNextPosition;
-
-
         }
     }
 }

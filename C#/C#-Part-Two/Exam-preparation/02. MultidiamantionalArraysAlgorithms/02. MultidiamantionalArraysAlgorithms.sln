@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatrixBiggestElement", "MatrixBiggestElement\MatrixBiggestElement.csproj", "{32AEBB3B-54A0-4500-9A33-260CC9F8C2F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaxPlatformIn2DArray", "MaxPlatformIn2DArray\MaxPlatformIn2DArray.csproj", "{A816166C-AA2A-4EFE-8917-D054757908B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumbersModuloThreeJaggedArrays", "NumbersModuloThreeJaggedArrays\NumbersModuloThreeJaggedArrays.csproj", "{EE65402C-0455-4947-A878-0074F448FD77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PascalTriangle", "PascalTriangle\PascalTriangle.csproj", "{22FC557E-8D90-4723-A2A4-732903B8E2CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatrixMultiplicationAlgorithm", "MatrixMultiplicationAlgorithm\MatrixMultiplicationAlgorithm.csproj", "{95337F5A-4B04-4B45-96E5-80F47D9ADCD0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{32AEBB3B-54A0-4500-9A33-260CC9F8C2F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32AEBB3B-54A0-4500-9A33-260CC9F8C2F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32AEBB3B-54A0-4500-9A33-260CC9F8C2F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32AEBB3B-54A0-4500-9A33-260CC9F8C2F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A816166C-AA2A-4EFE-8917-D054757908B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A816166C-AA2A-4EFE-8917-D054757908B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A816166C-AA2A-4EFE-8917-D054757908B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A816166C-AA2A-4EFE-8917-D054757908B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE65402C-0455-4947-A878-0074F448FD77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE65402C-0455-4947-A878-0074F448FD77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE65402C-0455-4947-A878-0074F448FD77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE65402C-0455-4947-A878-0074F448FD77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22FC557E-8D90-4723-A2A4-732903B8E2CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22FC557E-8D90-4723-A2A4-732903B8E2CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22FC557E-8D90-4723-A2A4-732903B8E2CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22FC557E-8D90-4723-A2A4-732903B8E2CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95337F5A-4B04-4B45-96E5-80F47D9ADCD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95337F5A-4B04-4B45-96E5-80F47D9ADCD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95337F5A-4B04-4B45-96E5-80F47D9ADCD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95337F5A-4B04-4B45-96E5-80F47D9ADCD0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
