@@ -1,9 +1,10 @@
 ﻿namespace MobilePhoneDevice
 {
     using System;
+    using System.Text;
 
     using MobilePhoneDevice.Validation;
-    using System.Text;
+
     public class Call
     {
         private string time;
@@ -27,7 +28,11 @@
             }
         }
 
-        public TimeSpan Duration { get; set; }
+        public TimeSpan Duration
+        {
+            get;
+            set;
+        }
 
         public string PhoneNumber
         {

@@ -8,7 +8,7 @@
 
     public class GSM
     {
-        private static GSM iPhone4S = new GSM("iPhone 4S", "Apple", 389, "default", new Battery("Apple", BatteryType.LiPo, 200, 8), new Display(3.5, 16000000));
+        private static GSM iPhoneFourS = new GSM("iPhone 4S", "Apple", 389, "default", new Battery("Apple", BatteryType.LiPo, 200, 8), new Display(3.5, 16000000));
 
         private string model;
         private string manufacturer;
@@ -29,17 +29,21 @@
             this.Display = display;
         }
 
-        public static GSM IPhone4S
+        public static GSM IPhoneFourS
         {
             get
             {
-                return iPhone4S;
+                return iPhoneFourS;
             }
         }
 
         public string Model
         {
-            get { return this.model; }
+            get
+            {
+                return this.model;
+            }
+
             private set
             {
                 this.model = value;
@@ -49,7 +53,11 @@
 
         public string Manufacturer
         {
-            get { return this.manufacturer; }
+            get
+            {
+                return this.manufacturer;
+            }
+
             set
             {
                 this.manufacturer = value;
@@ -57,13 +65,29 @@
             }
         }
 
-        public decimal Price { get; set; }
+        public decimal Price
+        {
+            get;
+            set;
+        }
 
-        public string Owner { get; set; }
+        public string Owner
+        {
+            get;
+            set;
+        }
 
-        public Battery Battery { get; private set; }
+        public Battery Battery
+        {
+            get;
+            private set;
+        }
 
-        public Display Display { get; private set; }
+        public Display Display
+        {
+            get;
+            private set;
+        }
 
         public List<Call> CallHistory
         {
@@ -116,9 +140,9 @@
 
             printInfo.AppendFormat("Device name: {0}{1}", this.Model, Environment.NewLine);
             printInfo.AppendFormat("Device manufacturer: {0}{1}", this.Manufacturer, Environment.NewLine);
-            printInfo.AppendFormat("Device battery: {0}{1}", this.Battery == null ? "" : this.Battery.ToString(), Environment.NewLine);
-            printInfo.AppendFormat("Device display: {0}", this.Display == null ? "" : Environment.NewLine);
-            printInfo.AppendFormat("{0}", this.Display == null ? "" : this.Display.ToString());
+            printInfo.AppendFormat("Device battery: {0}{1}", this.Battery == null ? string.Empty : this.Battery.ToString(), Environment.NewLine);
+            printInfo.AppendFormat("Device display: {0}", this.Display == null ? string.Empty : Environment.NewLine);
+            printInfo.AppendFormat("{0}", this.Display == null ? string.Empty : this.Display.ToString());
             return printInfo.ToString();
         }
     }

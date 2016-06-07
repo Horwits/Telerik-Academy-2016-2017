@@ -20,20 +20,31 @@
 
         public string Model
         {
-            get { return this.model; }
+            get
+            {
+                return this.model;
+            }
+
             set
             {
                 this.model = value;
-
                 MobilePhonePropertiesValidator.ValidateNames(value, "Model value is empty.");
             }
         }
 
-        public BatteryType Type { get; private set; }
+        public BatteryType Type
+        {
+            get;
+            private set;
+        }
 
         public decimal HoursIdle
         {
-            get { return this.hoursIdle; }
+            get
+            {
+                return this.hoursIdle;
+            }
+
             private set
             {
                 this.hoursIdle = value;
@@ -42,7 +53,11 @@
             }
         }
 
-        public decimal HoursTalk { get; private set; }
+        public decimal HoursTalk
+        {
+            get;
+            private set;
+        }
 
         public override string ToString()
         {

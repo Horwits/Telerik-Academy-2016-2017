@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MobilePhoneDevice
+﻿namespace MobilePhoneDevice
 {
+    using System;
+    using System.Collections.Generic;
+
     public class CallHistoryTest
     {
-        internal const decimal PRICE_PER_MINUTE = 0.37m;
+        internal const decimal PricePerMinute = 0.37m;
 
         public static int FindLongestCallPosition(ICollection<Call> callHistory)
         {
@@ -35,6 +32,7 @@ namespace MobilePhoneDevice
 
             return position;
         }
+
         public static void TestCallHistoryFunctionallity()
         {
             var s6 = new GSM("Samsung Galaxy S6", "Samsung");
@@ -46,7 +44,7 @@ namespace MobilePhoneDevice
 
             Console.WriteLine(string.Join(" ", s6.CallHistory));
 
-            var totalPrice = s6.CalculateTotalPriceOfCalls(PRICE_PER_MINUTE);
+            var totalPrice = s6.CalculateTotalPriceOfCalls(PricePerMinute);
             Console.WriteLine("{0:c}", totalPrice);
 
             var longestCallIndex = FindLongestCallPosition(s6.CallHistory);

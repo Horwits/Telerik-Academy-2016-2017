@@ -4,13 +4,13 @@
 
     internal class GSMTest
     {
-        static void Main()
+        internal static void Main()
         {
             try
             {
                 var noteTwo = new GSM("Samsung Note II", "Samsung", 629.0m, "Daniel Nikolov", new Battery("Samsung", BatteryType.Li_ion, 510, 990), new Display(5.5, 16000000));
 
-                var iphone = GSM.IPhone4S;
+                var iphone = GSM.IPhoneFourS;
 
                 var s5 = new GSM("Samsung S5", "Samsung");
 
