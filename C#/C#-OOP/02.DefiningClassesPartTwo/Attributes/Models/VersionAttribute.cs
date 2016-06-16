@@ -2,7 +2,14 @@
 {
     using System;
 
-    [AttributeUsage(AttributeTargets.Struct | AttributeTargets.Class | AttributeTargets.Method | AttributeTargets.Enum | AttributeTargets.Interface, AllowMultiple = false, Inherited = false)]
+    [AttributeUsage(
+        AttributeTargets.Struct |
+        AttributeTargets.Class |
+        AttributeTargets.Method |
+        AttributeTargets.Enum |
+        AttributeTargets.Interface,
+        AllowMultiple = false,
+        Inherited = false)]
     public class VersionAttribute : Attribute
     {
         private string version;

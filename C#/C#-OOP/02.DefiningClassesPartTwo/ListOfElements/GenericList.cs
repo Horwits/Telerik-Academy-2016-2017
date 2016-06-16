@@ -21,7 +21,8 @@
             {
                 if (index >= this.capacity || index < 0)
                 {
-                    throw new IndexOutOfRangeException("Index has to be equal or bigger than zero and less than max capacity.");
+                    throw new IndexOutOfRangeException(
+                        "Index has to be equal or bigger than zero and less than max capacity.");
                 }
 
                 return this.innerArray[index];
@@ -91,7 +92,8 @@
             var innerLength = this.innerArray.Length;
             if (index >= innerLength || index < 0)
             {
-                throw new IndexOutOfRangeException("The value of the given index is not valid.");
+                throw new IndexOutOfRangeException(
+                    "The value of the given index is not valid.");
             }
 
             var copyWithoutRemovedValue = new T[innerLength - 1];
@@ -160,7 +162,8 @@
         {
             var copyOldCapacity = this.capacity;
             this.capacity *= 2;
-            var newInnerArray = this.CopyOldInnerArray(this.capacity, copyOldCapacity);
+            var newInnerArray = 
+                this.CopyOldInnerArray(this.capacity, copyOldCapacity);
 
             this.innerArray = newInnerArray;
         }

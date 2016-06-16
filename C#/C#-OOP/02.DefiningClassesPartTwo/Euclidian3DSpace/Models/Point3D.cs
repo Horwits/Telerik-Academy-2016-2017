@@ -40,7 +40,10 @@
                 throw new ArgumentException("The line is in wrong format");
             }
 
-            var splitted = currentLine.Split(new char[] { ',', ' ', '{', '}', '(', ')' }, StringSplitOptions.RemoveEmptyEntries);
+            var splitted = 
+                currentLine.Split(
+                    new char[] { ',', ' ', '{', '}', '(', ')' },
+                    StringSplitOptions.RemoveEmptyEntries);
 
             var currentX = double.Parse(splitted[0]);
             var currentY = double.Parse(splitted[1]);

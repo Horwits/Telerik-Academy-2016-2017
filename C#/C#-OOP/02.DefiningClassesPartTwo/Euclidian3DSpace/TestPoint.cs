@@ -26,8 +26,7 @@
             Console.WriteLine(distance);
 
             Console.WriteLine(point.ToString());
-
-            Console.WriteLine(Environment.NewLine);
+            Console.Write(Environment.NewLine);
 
             Console.WriteLine(Point3D.Origin);
 
