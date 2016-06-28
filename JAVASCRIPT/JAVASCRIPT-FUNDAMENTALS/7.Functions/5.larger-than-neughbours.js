@@ -1,7 +1,6 @@
 function solve(args) {
-    var lines = args[0].split('\n'),
-        n = +lines[0],
-        numbers = lines[1].split(' ').map(Number),
+        var n = +args[0],
+        numbers = args[1].split(' ').map(Number),
         counter = 0;
 
     for (var i = 1; i < n; i += 1) {
@@ -15,6 +14,6 @@ function solve(args) {
     return counter;
 }
 
-var test = ['6\n-26 -25 -28 31 2 27']
+var test = ['6','-26 -25 -28 31 2 27']
 
 console.log(solve(test)); 
