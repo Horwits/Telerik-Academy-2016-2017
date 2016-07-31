@@ -1,0 +1,1 @@
+Deck.Tests.DeckTest.ChangeTrumpCard_IfNullValueIsPassed_ShouldBeNull

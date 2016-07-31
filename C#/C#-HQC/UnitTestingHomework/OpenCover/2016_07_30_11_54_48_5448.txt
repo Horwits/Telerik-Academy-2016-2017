@@ -1,0 +1,1 @@
+Deck.Tests.DeckTest.GetNextCard_WhenListOfCardsCountIsZero_ShouldThrowInternalGameException
