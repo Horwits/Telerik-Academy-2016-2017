@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+<div id="root">
+    <ul id="container"></ul>
+    <h1>heading1</h1>
+    <h2>heading2</h2>
+</div>
+
+<script id="obj-template-test" type="handlebars.template">
+    <ul>
+        {{#each array}}
+        <li>
+            {{name}}</br>
+            <a href="http//www.google.bg/#q={{name}}">Search {{name}} in google.</a>
+        </li>
+        {{/each}}
+    </ul>
+</script>
+
+<script id="iterateCollection-template-test" type="handlebars.template">
+    <ul>
+        {{#names}}
+        <li>{{this}}</li>
+        {{/names}}
+    </ul>
+</script>
+
+<script id="ifelse-template-test" type="handlebars.template">
+    <h1>{{title}}</h1>
+    {{#if title2}}
+    <h2>{{title2}}</h2>
+    {{else}}
+    <h2>no title2</h2>
+    {{/if}}
+</script>
+<script id="container-template" type="handlebars.template">
+    <li>{{name}}</li>
+</script>
+<script src="handlebars-v4.0.5.js"></script>
+<script src="main.js"></script>
+</body>
+
+</html>
