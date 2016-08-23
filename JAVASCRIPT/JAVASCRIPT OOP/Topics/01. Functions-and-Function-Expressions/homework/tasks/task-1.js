@@ -7,30 +7,32 @@
 		throws if any of the elements is not convertible to Number	
 
 */
+function solve() {
+	function sum() {
+		var args = arguments[0];
 
-function sum() {
-	var args = arguments[0];
+		if (arguments[0].length === 0) {
+			return null;
+		}
 
-	if (arguments[0].length === 0) {
-		return null;
-	}
-
-	if (args === undefined) {
-		throw new Error();
-	}
-
-	var sum = 0;
-	for (var i = 0; i < args.length; i++) {
-		var el = +args[i];
-
-		if (isNaN(el)) {
+		if (args === undefined) {
 			throw new Error();
 		}
 
-		sum += el;
-	}
+		var sum = 0;
+		for (var i = 0; i < args.length; i++) {
+			var el = +args[i];
 
-	return sum;
+			if (isNaN(el)) {
+				throw new Error();
+			}
+
+			sum += el;
+		}
+
+		return sum;
+	}
 }
+
 
 module.exports = sum;
