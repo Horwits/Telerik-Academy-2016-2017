@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/import-modules.js"],"names":["Aritmethics","console","log","add"],"mappings":"AAAA,OAAO,KAAKA,WAAZ,MAA6B,gBAA7B;;AAEAC,QAAQC,GAAR,CAAYF,YAAYG,GAAZ,CAAgB,CAAhB,EAAmB,CAAnB,CAAZ","file":"import-modules.js","sourcesContent":["import * as Aritmethics from 'export-modules';\r\n\r\nconsole.log(Aritmethics.add(3, 5));"]}

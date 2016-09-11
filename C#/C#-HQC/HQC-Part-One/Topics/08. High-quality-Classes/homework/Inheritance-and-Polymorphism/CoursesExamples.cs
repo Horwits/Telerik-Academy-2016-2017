@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using InheritanceAndPolymorphism.Models;
 
 namespace InheritanceAndPolymorphism
 {
-    class CoursesExamples
+    internal class CoursesExamples
     {
-        static void Main()
+        internal static void Main()
         {
             LocalCourse localCourse = new LocalCourse("Databases");
             Console.WriteLine(localCourse);
@@ -22,7 +23,8 @@ namespace InheritanceAndPolymorphism
             Console.WriteLine(localCourse);
 
             OffsiteCourse offsiteCourse = new OffsiteCourse(
-                "PHP and WordPress Development", "Mario Peshev", 
+                "PHP and WordPress Development",
+                "Mario Peshev", 
                 new List<string>() { "Thomas", "Ani", "Steve" });
             Console.WriteLine(offsiteCourse);
         }

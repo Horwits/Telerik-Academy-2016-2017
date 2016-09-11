@@ -41,8 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Methods.cs" />
+    <Compile Include="Contracts\IStudent.cs" />
+    <Compile Include="StartUp.cs" />
+    <Compile Include="Printers\ConsolePrinter.cs" />
     <Compile Include="Student.cs" />
+    <Compile Include="Utils\MathUtils.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />

@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Converters", "TaskOne\Converters.csproj", "{3132024A-7190-45E7-A8C8-54764C127B33}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TaskOne", "TaskOne", "{CBCC7DA5-4EDC-45C9-8B7F-142943E7E60A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TaskTwo", "TaskTwo", "{E82410B1-FF88-4985-9898-7BE213E1F7E1}"
+	ProjectSection(SolutionItems) = preProject
+		Gender.cs = Gender.cs
+		Human.cs = Human.cs
+		HumanCreator.cs = HumanCreator.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TaskThree", "TaskThree", "{E07B4EFF-5C79-466F-A71A-AF59B3ED9D99}"
+	ProjectSection(SolutionItems) = preProject
+		clicked-button.js = clicked-button.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TaskFour", "TaskFour", "{2FBD0978-7F88-4ACB-B1AF-A707C4961ED6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JustMines", "Mines\JustMines.csproj", "{98558D8A-72E5-4969-87DC-F48ACAA2C307}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3132024A-7190-45E7-A8C8-54764C127B33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3132024A-7190-45E7-A8C8-54764C127B33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3132024A-7190-45E7-A8C8-54764C127B33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3132024A-7190-45E7-A8C8-54764C127B33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98558D8A-72E5-4969-87DC-F48ACAA2C307}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98558D8A-72E5-4969-87DC-F48ACAA2C307}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98558D8A-72E5-4969-87DC-F48ACAA2C307}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98558D8A-72E5-4969-87DC-F48ACAA2C307}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3132024A-7190-45E7-A8C8-54764C127B33} = {CBCC7DA5-4EDC-45C9-8B7F-142943E7E60A}
+		{98558D8A-72E5-4969-87DC-F48ACAA2C307} = {2FBD0978-7F88-4ACB-B1AF-A707C4961ED6}
+	EndGlobalSection
+EndGlobal

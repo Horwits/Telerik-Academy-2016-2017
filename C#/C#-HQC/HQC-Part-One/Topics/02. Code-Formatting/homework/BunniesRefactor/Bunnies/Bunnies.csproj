@@ -45,7 +45,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BunniesStartUp.cs" />
-    <Compile Include="Bunny.cs" />
+    <Compile Include="Bunny.cs">
+      <ExcludeFromStyleCop>True</ExcludeFromStyleCop>
+    </Compile>
     <Compile Include="FurrType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
