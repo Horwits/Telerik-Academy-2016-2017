@@ -1,14 +1,9 @@
-﻿//-----------------------------------------------------------------------
-// <copyright file="StringExtensions.cs" company="CompanyName">
-//     Company copyright tag.
-// </copyright>
-//-----------------------------------------------------------------------
-namespace Telerik.ILS.Common
+﻿namespace Telerik.ILS.Common
 {
     using System;
     using System.Collections.Generic;
     using System.Globalization;
-    using System.Linq;
+    using System.Linq;  
     using System.Security.Cryptography;
     using System.Text;
     using System.Text.RegularExpressions;

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<library>
+    <books>
+        <book>
+            <id>id1</id>
+            <title>item1</title>
+        </book>
+        <book>
+            <id>id2</id>
+            <title>item2</title>
+        </book>
+        <book>
+            <id>id3</id>
+            <title>item3</title>
+        </book>
+    </books>
+</library>

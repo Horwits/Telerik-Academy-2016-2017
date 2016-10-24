@@ -23,11 +23,7 @@ function solve(params) {
             isInValey = false;
         }
 
-        if (!isInValey) {
-            currentCount = secondPeekInd - firstPeekInd;
-            //find maxCOunt
-            maxCount = Math.max(currentCount, maxCount);
-        }
+        
     }
 
     console.log(maxCount);
