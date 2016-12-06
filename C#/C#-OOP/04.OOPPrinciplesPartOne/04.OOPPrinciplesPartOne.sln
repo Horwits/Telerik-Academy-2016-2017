@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolSystem", "SchoolSystem\SchoolSystem.csproj", "{3F66B136-1902-47C8-B95D-60C18FB03850}"
 EndProject
@@ -10,6 +10,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Validation", "Validation\Validation.csproj", "{F8354DD3-0333-4031-9E51-50CE14583586}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimalHierarchy", "AnimalHierarchy\AnimalHierarchy.csproj", "{17C33435-D76D-470C-8D15-A3365F6C2354}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleWebServer.Framework", "C:\Users\Horwi\Desktop\Design-Patterns-master\Design-Patterns-master\Topics\06. DI and IoC containers - workshop\demos\ConsoleWebServer - final\ConsoleWebServer.Framework\ConsoleWebServer.Framework.csproj", "{B64CEFAB-4165-4DFA-98AC-AA042A70AAA5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleWebServer.Application", "C:\Users\Horwi\Desktop\Design-Patterns-master\Design-Patterns-master\Topics\06. DI and IoC containers - workshop\demos\ConsoleWebServer - final\ConsoleWebServer.Application\ConsoleWebServer.Application.csproj", "{C553869D-65D7-4FA9-94E1-D05578B0FCAD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{17C33435-D76D-470C-8D15-A3365F6C2354}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17C33435-D76D-470C-8D15-A3365F6C2354}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17C33435-D76D-470C-8D15-A3365F6C2354}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B64CEFAB-4165-4DFA-98AC-AA042A70AAA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B64CEFAB-4165-4DFA-98AC-AA042A70AAA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B64CEFAB-4165-4DFA-98AC-AA042A70AAA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B64CEFAB-4165-4DFA-98AC-AA042A70AAA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C553869D-65D7-4FA9-94E1-D05578B0FCAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C553869D-65D7-4FA9-94E1-D05578B0FCAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C553869D-65D7-4FA9-94E1-D05578B0FCAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C553869D-65D7-4FA9-94E1-D05578B0FCAD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

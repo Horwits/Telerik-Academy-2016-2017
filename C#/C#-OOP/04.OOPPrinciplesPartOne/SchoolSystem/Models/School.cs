@@ -32,7 +32,7 @@
 
             set
             {
-                Validation.ValidateString(value);
+                ValidationUtils.ValidateString(value);
                 this.name = value;
             }
         }

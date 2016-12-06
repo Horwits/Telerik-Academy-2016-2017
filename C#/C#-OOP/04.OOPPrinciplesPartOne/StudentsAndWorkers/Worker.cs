@@ -28,7 +28,7 @@
 
             set
             {
-                Validation.ValidateDecimal(value);
+                ValidationUtils.ValidateDecimal(value);
                 this.weekSalary = value;
             }
         }
@@ -42,7 +42,7 @@
 
             set
             {
-                Validation.ValidateUInt(value);
+                ValidationUtils.ValidateUInt(value);
                 this.workHoursPerDay = value;
             }
         }

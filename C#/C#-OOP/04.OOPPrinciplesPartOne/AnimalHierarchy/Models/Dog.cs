@@ -1,6 +1,7 @@
 ﻿namespace AnimalHierarchy.Models
 {
     using AnimalHierarchy.Interfaces;
+    using AnimalHierarchy.Types;
 
     public class Dog : Animal, ISound
     {

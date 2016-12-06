@@ -28,7 +28,7 @@
 
             set
             {
-                Validation.ValidateUInt(value);
+                ValidationUtils.ValidateUInt(value);
 
                 this.classNumber = value;
             }

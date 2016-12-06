@@ -33,7 +33,7 @@
 
             private set
             {
-                Validation.ValidateString(value);
+                ValidationUtils.ValidateString(value);
 
                 this.name = value;
             }
@@ -48,7 +48,7 @@
 
             set
             {
-                Validation.ValidateUInt(value);
+                ValidationUtils.ValidateUInt(value);
 
                 this.numberOfLectures = value;
             }
@@ -63,7 +63,7 @@
 
             set
             {
-                Validation.ValidateUInt(value);
+                ValidationUtils.ValidateUInt(value);
 
                 this.numberOfExercises = value;
             }
@@ -78,7 +78,7 @@
 
             set
             {
-                value = Validation.ValidateCommentString(value);
+                value = ValidationUtils.ValidateCommentString(value);
 
                 this.comment = value;
             }

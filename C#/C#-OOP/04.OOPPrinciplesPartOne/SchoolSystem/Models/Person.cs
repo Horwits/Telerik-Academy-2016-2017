@@ -22,7 +22,7 @@
 
             private set
             {
-                Validation.ValidateString(value);
+                ValidationUtils.ValidateString(value);
 
                 this.name = value;
             }
@@ -37,7 +37,7 @@
 
             set
             {
-                value = Validation.ValidateCommentString(value);
+                value = ValidationUtils.ValidateCommentString(value);
 
                 this.comment = value;
             }

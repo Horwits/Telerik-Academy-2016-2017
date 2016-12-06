@@ -1,14 +1,15 @@
 ﻿namespace AnimalHierarchy.Models
 {
     using AnimalHierarchy.Interfaces;
+    using AnimalHierarchy.Types;
     using Validation;
 
-    public abstract class Animal : ISound
+    public abstract class Animal : IAnimal, ISound
     {
         private string name;
         private uint age;
 
-        public Animal(string name, uint age, Sex sex)
+        protected Animal(string name, uint age, Sex sex)
         {
             this.Name = name;
             this.Age = age;
@@ -24,7 +25,7 @@
 
             set
             {
-                Validation.ValidateString(value);
+                ValidationUtils.ValidateString(value);
                 this.name = value;
             }
         }
@@ -38,7 +39,7 @@
 
             set
             {
-                Validation.ValidateUInt(value);
+                ValidationUtils.ValidateUInt(value);
                 this.age = value;
             }
         }

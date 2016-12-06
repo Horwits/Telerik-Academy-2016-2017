@@ -22,7 +22,7 @@
 
             set
             {
-                Validation.ValidateString(value);
+                ValidationUtils.ValidateString(value);
                 this.firstName = value;
             }
         }
@@ -36,7 +36,7 @@
 
             set
             {
-                Validation.ValidateString(value);
+                ValidationUtils.ValidateString(value);
                 this.lastName = value;
             }
         }
