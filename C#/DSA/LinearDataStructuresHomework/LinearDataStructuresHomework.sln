@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinearDataStructuresHomework.CLI", "LinearDataStructuresHomework.CLI\LinearDataStructuresHomework.CLI.csproj", "{DB454BD6-CE88-4ACF-8465-958369057DAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinearDataStructuresHomework.Data", "LinearDataStructuresHomework.Data\LinearDataStructuresHomework.Data.csproj", "{1A0BE9F9-EC3E-4EC9-86FA-5D29F34D6DA0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStructuresHomework.Tests", "DataStructuresHomeworkModule.Tests\DataStructuresHomework.Tests.csproj", "{2B70D93E-69D9-4635-9047-AFC2D7D101F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomCollectionsImplementations", "CustomCollectionsImplementations\CustomCollectionsImplementations.csproj", "{04AE1DDC-EB11-4EB1-9BF3-F4B70A13B5B1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB454BD6-CE88-4ACF-8465-958369057DAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB454BD6-CE88-4ACF-8465-958369057DAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB454BD6-CE88-4ACF-8465-958369057DAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB454BD6-CE88-4ACF-8465-958369057DAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A0BE9F9-EC3E-4EC9-86FA-5D29F34D6DA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A0BE9F9-EC3E-4EC9-86FA-5D29F34D6DA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A0BE9F9-EC3E-4EC9-86FA-5D29F34D6DA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A0BE9F9-EC3E-4EC9-86FA-5D29F34D6DA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B70D93E-69D9-4635-9047-AFC2D7D101F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B70D93E-69D9-4635-9047-AFC2D7D101F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B70D93E-69D9-4635-9047-AFC2D7D101F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B70D93E-69D9-4635-9047-AFC2D7D101F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04AE1DDC-EB11-4EB1-9BF3-F4B70A13B5B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04AE1DDC-EB11-4EB1-9BF3-F4B70A13B5B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04AE1DDC-EB11-4EB1-9BF3-F4B70A13B5B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04AE1DDC-EB11-4EB1-9BF3-F4B70A13B5B1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
