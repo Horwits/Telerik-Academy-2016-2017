@@ -24,12 +24,12 @@
 
                 if (best != i)
                 {
-                    collection = this.Swap(collection, i, best);
+                    this.Swap(collection, i, best);
                 }
             }
         }
 
-        private IList<T> Swap(IList<T> collection, int firstPosition, int secondPosition)
+        private void Swap(IList<T> collection, int firstPosition, int secondPosition)
         {
             var minPosIsInvalid = firstPosition < 0 || firstPosition >= collection.Count;
             var maxPosIsInvalid = secondPosition < 0 || secondPosition >= collection.Count;
@@ -42,7 +42,6 @@
             var toBeSwappedValue = collection[firstPosition];
             collection[firstPosition] = collection[secondPosition];
             collection[secondPosition] = toBeSwappedValue;
-            return collection;
         }
     }
 }
