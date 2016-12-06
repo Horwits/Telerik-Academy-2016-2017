@@ -1,0 +1,10 @@
+finding the min element position
+
+for i = 0 to n - 2
+	var best = i
+	for j = i + 1(next position) to n - 1
+		if a[j] < a[best]
+			best = j;
+
+	if best != i
+		swap (a[best] with a[i])
