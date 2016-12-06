@@ -12,5 +12,21 @@
         {
             throw new NotImplementedException();
         }
+
+        private IList<T> Swap(IList<T> collection, int firstPosition, int secondPosition)
+        {
+            var minPosIsInvalid = firstPosition < 0 || firstPosition >= collection.Count;
+            var maxPosIsInvalid = secondPosition < 0 || secondPosition >= collection.Count;
+
+            if (minPosIsInvalid || maxPosIsInvalid)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
+
+            var toBeSwappedValue = collection[firstPosition];
+            collection[firstPosition] = collection[secondPosition];
+            collection[secondPosition] = toBeSwappedValue;
+            return collection;
+        }
     }
 }
