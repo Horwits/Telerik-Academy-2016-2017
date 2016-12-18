@@ -1,11 +1,8 @@
-﻿namespace SortingHomework
-{
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
+﻿using System;
+using System.Collections.Generic;
 
+namespace SortingHomework
+{
     public class SelectionSorter<T> : ISorter<T> where T : IComparable<T>
     {
         public void Sort(IList<T> collection)
@@ -24,24 +21,9 @@
 
                 if (best != i)
                 {
-                    this.Swap(collection, i, best);
+                    Utils<T>.Swap(collection, i, best);
                 }
             }
-        }
-
-        private void Swap(IList<T> collection, int firstPosition, int secondPosition)
-        {
-            var minPosIsInvalid = firstPosition < 0 || firstPosition >= collection.Count;
-            var maxPosIsInvalid = secondPosition < 0 || secondPosition >= collection.Count;
-
-            if (minPosIsInvalid || maxPosIsInvalid)
-            {
-                throw new ArgumentOutOfRangeException();
-            }
-
-            var toBeSwappedValue = collection[firstPosition];
-            collection[firstPosition] = collection[secondPosition];
-            collection[secondPosition] = toBeSwappedValue;
         }
     }
 }

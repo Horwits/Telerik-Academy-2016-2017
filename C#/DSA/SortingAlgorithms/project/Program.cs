@@ -1,10 +1,6 @@
 ﻿namespace SortingHomework
 {
     using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
 
     internal class Program
     {
@@ -20,7 +16,7 @@
             collection.PrintAllItemsOnConsole();
             Console.WriteLine();
 
-            /*collection = new SortableCollection<int>(new[] { 22, 11, 101, 33, 0, 101 });
+            collection = new SortableCollection<int>(new[] { 22, 11, 101, 33, 0, 101 });
             Console.WriteLine("Quicksorter result:");
             collection.Sort(new Quicksorter<int>());
             collection.PrintAllItemsOnConsole();
@@ -47,7 +43,7 @@
 
             Console.WriteLine("Shuffle again:");
             collection.Shuffle();
-            collection.PrintAllItemsOnConsole();*/
+            collection.PrintAllItemsOnConsole();
         }
     }
 }
